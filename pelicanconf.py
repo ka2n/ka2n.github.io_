@@ -9,7 +9,7 @@ SITEURL = ''
 
 TIMEZONE = 'Asia/Tokyo'
 
-DEFAULT_LANG = u'ja'
+DEFAULT_LANG = u'en'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -29,5 +29,9 @@ RELATIVE_URLS = True
 
 THEME="ktmtt"
 
+# URL
 ARTICLE_URL = '-/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = '-/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+
+# Format
+DEFAULT_DATE_FORMAT = '%Y-%m-%d'
