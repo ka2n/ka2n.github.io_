@@ -1,0 +1,15 @@
+ちょっと前に教えてもらったこと(今更知った)
+##########################################
+:date: 2010-06-09 23:50
+:author: ka2n
+:category: general
+:slug: 271
+
+|image0|
+
+    シフトキーを押しながらカーソル移動で、文字の選択が出来る
+
+衝撃でした…
+
+.. |image0| image:: http://ktmtt.com/diary/wp-content/uploads/bdc127d90dbff5159af24e79e07e93fa.png
+   :target: http://ktmtt.com/diary/wp-content/uploads/bdc127d90dbff5159af24e79e07e93fa.png
