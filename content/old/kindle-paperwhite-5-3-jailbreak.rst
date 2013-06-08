@@ -24,8 +24,8 @@ koboハックは案外盛り上がっていて楽しそうですが、既に一�
 
    </div>
 
-| 現在対応しているファームウェアのバージョンは5.3.1までのようです。
-|  バージョンの確認は、ホームから 右上のメニュー > 設定 >
+現在対応しているファームウェアのバージョンは5.3.1までのようです。
+バージョンの確認は、ホームから 右上のメニュー > 設定 >
 もう一度右上のメニュー > 端末情報
 から見ることができます。自分は購入時5.3.0、先程5.3.1にアップデートしました。(やり方は\ `こっち`_\ に書きました)
 
@@ -37,17 +37,16 @@ http://www.mobileread.com/forums/showthread.php?t=198446
    と "MOBI8\_DEBUG"をコピーする。
 #. jailbreak.mobiは直下ではなくdocuments以下に置く。(これが細工されたmobiファイルでjailbreak.shを呼ぶのかな??)
 #. kindleをアンマウントする。
-#. ホーム画面に"Paperwhite
-   Jailbreak"とマヤ文明の絵みたいな表紙が書かれたパーソナルドキュメントがあるのでそれを開く
-    |kindle jailbreal|
+#. ホーム画面に"Paperwhite Jailbreak"とマヤ文明の絵みたいな表紙が書かれたパーソナルドキュメントがあるのでそれを開く
+    |kindle_jailbreak|
 #. すると下の画面になるので、文字をタップ
     |image1|
 #. 表示されているとおりに左上を2秒ほど長押し
     |image2|
-#. あとはおまかせ、、
-    `|image3|
-   `_\ `|image4|
-   `_\ |image5|
+#. あとはおまかせ
+    |image3|
+    |image4|
+    |image5|
 #. 丁寧にログまで残してくれるんですね。あっさり完了。
     |image6|
     |image7|
@@ -55,12 +54,8 @@ http://www.mobileread.com/forums/showthread.php?t=198446
 文鎮化した際はどうしようもないようなので、その時は観念しましょう。
 
 .. _こっち: http://ktmtt.com/diary/2012-kindle-paperwhite-firmware-update.html
-.. _|image8|
-: http://ktmtt.com/diary/wp-content/uploads/ff15cbae21d03e1b9fb739830db4f39c.png
-.. _|image9|
-: http://ktmtt.com/diary/wp-content/uploads/ab4d8a5d3ba2182253f295b7de29f41c.png
 
-.. |kindle jailbreal| image:: http://ktmtt.com/diary/wp-content/uploads/22e2b5cc8d152fff9a3ba6f6a9c4b214-222x300.png
+.. |kindle_jailbreak| image:: http://ktmtt.com/diary/wp-content/uploads/22e2b5cc8d152fff9a3ba6f6a9c4b214-222x300.png
    :target: http://ktmtt.com/diary/wp-content/uploads/22e2b5cc8d152fff9a3ba6f6a9c4b214.png
 .. |image1| image:: http://ktmtt.com/diary/wp-content/uploads/db2b16b36269374d5e52441a4f62538e-222x300.png
    :target: http://ktmtt.com/diary/wp-content/uploads/db2b16b36269374d5e52441a4f62538e.png
@@ -75,4 +70,6 @@ http://www.mobileread.com/forums/showthread.php?t=198446
 .. |image7| image:: http://ktmtt.com/diary/wp-content/uploads/4e1deab25f47a7c3709a0855bb1ed593-222x300.png
    :target: http://ktmtt.com/diary/wp-content/uploads/4e1deab25f47a7c3709a0855bb1ed593.png
 .. |image8| image:: http://ktmtt.com/diary/wp-content/uploads/ff15cbae21d03e1b9fb739830db4f39c-222x300.png
+   :target: http://ktmtt.com/diary/wp-content/uploads/ff15cbae21d03e1b9fb739830db4f39c.png
 .. |image9| image:: http://ktmtt.com/diary/wp-content/uploads/ab4d8a5d3ba2182253f295b7de29f41c-222x300.png
+   :target: http://ktmtt.com/diary/wp-content/uploads/ab4d8a5d3ba2182253f295b7de29f41c.png
