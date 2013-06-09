@@ -9,24 +9,21 @@ Titanium mobileでiPhoneの電話用のスピーカー(レシーバー)から音
 Titanium
 mobileで音声ファイルを再生したい時はTi.Media.sound周りなどを使いますが、大きな音が出るスピーカーではなく電話の時に使う小さいスピーカー(本当はレシーバーというそうです)から音を出したいときってありますよね。きっと。探しみたら簡単にできる様なのでここに書いておきます。
 
-[code lang="javascript" title="Play sound with Speaker or Receiver"]
+.. code-block:: javascript
 
-| var player = Ti.Media.createSound({
-|  url: 'sound.caf'
-|  });
+    var player = Ti.Media.createSound({
+     url: 'sound.caf'
+     });
 
-player.play(); // スピーカーから音がなる
+    player.play(); // スピーカーから音がなる
 
-| // 現在のオーディオセッションのルートを変える
-| 
-Ti.Media.setAudioSessionMode(Ti.Media.AUDIO\_SESSION\_MODE\_PLAY\_AND\_RECORD);
+    // 現在のオーディオセッションのルートを変える
+    Ti.Media.setAudioSessionMode(Ti.Media.AUDIO_SESSION_MODE_PLAY_AND_RECORD);
 
-player.play(); // レシーバーから音がなる
+    player.play(); // レシーバーから音がなる
 
-| // 元のルートに変える
-| 
-Ti.Media.setAudioSessionMode(Titanium.Media.AUDIO\_SESSION\_MODE\_PLAYBACK);
+    // 元のルートに変える
 
-player.play(); // スピーカーから音がなる
+    Ti.Media.setAudioSessionMode(Titanium.Media.AUDIO_SESSION_MODE_PLAYBACK);
 
-[/code]
+    player.play(); // スピーカーから音がなる

@@ -5,22 +5,22 @@ Titanium/iPhone 指定できるフォント
 :category: general
 :slug: titanium-iphone
 
-| Appcelerator
-TitaniumでiPhone(iOS)向けアプリケーションを開発する際、ラベルなどに使用できるフォントの一覧。
-|  mobilesdk v1.4.1.1くらいの情報です。
+Appcelerator TitaniumでiPhone(iOS)向けアプリケーションを開発する際、ラベルなどに使用できるフォントの一覧。
+mobilesdk v1.4.1.1くらいの情報です。
 
 指定方法
 
-| [code]
-|  var new\_label = Ti. UI.createLabel({
-|  color:"#000",
-|  text:"テキスト",
-|  font:{ fontWeight: "bold", fontSize: 20, fontFamily: 'Helvetica Neue'
-},
-|  textAlign:center,
-|  width:'auto'
-|  });
-|  [/code]
+.. code-block:: javascript
+
+    var new_label = Ti. UI.createLabel({
+        color:"#000",
+        text:"テキスト",
+        font:{ fontWeight: "bold", fontSize: 20, fontFamily: 'Helvetica Neue'},
+        textAlign:center,
+        width:'auto'
+    });
+
+
 
 フォントによってはfontWeightの指定が効かないものもある。
 
@@ -79,6 +79,6 @@ TitaniumでiPhone(iOS)向けアプリケーションを開発する際、ラベ�
 -  Verdana-Italic
 -  Zapfino
 
-| 別途フォントファイルを用意すればこのリストに無いものも使用できるみたいです。
-| 
+別途フォントファイルを用意すればこのリストに無いものも使用できるみたいです。
+
 http://developer.appcelerator.com/blog/2010/04/adding-custom-fonts-to-ipad.html

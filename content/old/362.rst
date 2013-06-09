@@ -8,11 +8,11 @@
 
 チャリをバラして
 
-|IMG\_0861|
+|IMG0861|
 
 とりあえずパーツクリーナーでグリースを落とします。
 
-|IMG\_0863|
+|IMG0863|
 
 |1000000797|
 
@@ -20,7 +20,7 @@
 
 サンドペーパーで何度も何度も水磨き。
 
-|IMG\_0867|
+|IMG0867|
 
 その後ピカール！
 
@@ -28,15 +28,15 @@
 
 ピッカピカ
 
-.. |IMG\_0861| image:: http://farm5.static.flickr.com/4075/4937748795_1e58fd0b83_m.jpg
+.. |IMG0861| image:: http://farm5.static.flickr.com/4075/4937748795_1e58fd0b83_m.jpg
    :target: http://www.flickr.com/photos/ka2n/4937748795/
-.. |IMG\_0863| image:: http://farm5.static.flickr.com/4120/4938336354_d572b4a0df.jpg
+.. |IMG0863| image:: http://farm5.static.flickr.com/4120/4938336354_d572b4a0df.jpg
    :target: http://www.flickr.com/photos/ka2n/4938336354/
 .. |1000000797| image:: http://farm5.static.flickr.com/4142/4872371802_20fa7a4ea2.jpg
    :target: http://www.flickr.com/photos/ka2n/4872371802/
 .. |1000000798| image:: http://farm5.static.flickr.com/4136/4872370482_25265ca366.jpg
    :target: http://www.flickr.com/photos/ka2n/4872370482/
-.. |IMG\_0867| image:: http://farm5.static.flickr.com/4137/4938337600_b5ff99f52e.jpg
+.. |IMG0867| image:: http://farm5.static.flickr.com/4137/4938337600_b5ff99f52e.jpg
    :target: http://www.flickr.com/photos/ka2n/4938337600/
 .. |1000000801| image:: http://farm5.static.flickr.com/4119/4871761203_d1171b05ff.jpg
    :target: http://www.flickr.com/photos/ka2n/4871761203/

@@ -10,11 +10,11 @@ iPhoneのSafari(webkit)用にウェブページを作る際のtips.
 
 input要素にtype="search"だけ付与しても検索用のキーボードがでない。
 
-| [code]
-|  <form>
-|  <input type="search" placeholder"けんさく" />
-|  </form>
-|  [/code]
+.. code-block:: html
+
+    <form>
+        <input type="search" placeholder="けんさく" />
+    </form>
 
 ちゃんとformタグで囲うと「改行」ではなく「検索」となります。
 

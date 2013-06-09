@@ -7,4 +7,6 @@ brewに新しいコマンドが増えていた
 
 Macをお使いの方々はパッケージマネージャーにMacPortsかHomebrewのどちらかをお使いかと思いますが、前日brew-updateしたらHomebrewにコマンドが増えていました。
 
-[code]brew beer[/code]
+.. code-block:: console
+
+    $ brew beer

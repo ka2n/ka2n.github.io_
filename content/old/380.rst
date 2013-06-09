@@ -6,21 +6,28 @@
 :tags: javascript, jquery, Tips
 :slug: 380
 
-| 脳を溶かすjquerネタ。
-|  [code]
-|  $('#hige > a').click(function(){
-|  alert('hage');
-|  });
-|  [/code]
+脳を溶かすjqueryネタ。
 
-| なんて書いてあっても、[code]$('#hige').append('<a
-href="."'>追加</a>');[/code]で追加したやつにはイベントが設定されていないので、反応しない。
-|  そういう場合は、
-|  [code]
-|  $('#hige > a').live('click', function(){
-|  alert('hage');
-|  });
-|  [/code]
-|  と書く。ふむふむ。
+.. code-block:: javascript
+   
+    $('#hige > a').click(function(){
+        alert('hage');
+    });
 
+なんて書いてあっても、
+
+.. code-block:: javascript
+
+    ('#hige').append('<a href=".">追加</a>');
+
+で追加したやつにはイベントが設定されていないので、反応しない。
+そういう場合は、
+
+.. code-block:: javascript
+
+    $('#hige > a').live('click', function(){
+    alert('hage');
+    });
+
+と書く。ふむふむ。
 jqueryは卒業したい今日このごろ。

@@ -19,28 +19,27 @@ Tips:myPhoneDesktopのクライアントアプリケーションをDockから隠
 
 myPhoneDesktopのデスクトップクライアントは起動すると、メニューバーに常駐します。なのでDockに表示されるアイコンはなくても困らないので、非表示にしたい。LSUIElementをInfo.plistに加えてみた所、Dockのアイコンは表示されなくなったものの、アプリケーションのウィンドウがXボタンを押しても閉じられなくなってしまいました。
 
-myPhoneDesktopのデスクトップクライアントは<閉じる>動作を普通のアプリケーションで言う<隠す>で実装してるみたい。どうしてもDockに表示したく無い場合は、以下の方法(LSUIElement)でDockから消して、ウィンドウは\ **Command
-+ H**\ で消す。という使い方になります。
+myPhoneDesktopのデスクトップクライアントは<閉じる>動作を普通のアプリケーションで言う<隠す>で実装してるみたい。どうしてもDockに表示したく無い場合は、以下の方法(LSUIElement)でDockから消して、ウィンドウは\ **Command + H**\ で消す。という使い方になります。
 
 (myPhoneDesktopのデスクトップクライアントでは使えませんが)大抵のアプリケーションで使える、「Dockからアイコンを消す」方法
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 任意のエディタ : myPhoneDesktop.app > Contents > Info.plist
 
-| [code lang="plain"]
-|  <key>LSUIElement</key>
-|  <string>1</string>
-|  [/code]
+.. code-block:: xml
+
+    <key>LSUIElement</key>
+    <string>1</string>
 
 もしくは
 
 Property List Editor.app : Info.plist
 
-| [code lang="plain"]
-|  >Add Item
-|  Key : Application is agent (UIElement)
-|  Value : チェックボックスをチェックする
-|  [/code]
+.. code-block:: text
+
+    >Add Item
+    Key : Application is agent (UIElement)
+    Value : チェックボックスをチェックする
 
 .. _iPhone on your Desktop \| myPhoneDesktop: http://www.myphonedesktop.com/
 .. _myPhoneDesktop: http://itunes.apple.com/jp/app/id352226779?mt=8

@@ -6,9 +6,5 @@ GuradでJSXでの開発を快適に
 :tags: javascript, JSX
 :slug: gurad-jsx
 
-| `https://gist.github.com/2863673
-`_
-|  おもしろそうな上に使えそうなJSX
-
-.. _`https://gist.github.com/2863673
-`: https://gist.github.com/2863673
+https://gist.github.com/2863673
+おもしろそうな上に使えそうなJSX

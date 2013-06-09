@@ -9,8 +9,7 @@ PowerBookG4Ti 550Mhzが発掘されたのでDebianを入れた
 自宅にサーバを建てることになって、黒柴とかSheevaPlugとか物色してたんですが、お財布が寂しい感じなので、家を捜索してPowerBook
 G4 Titanium 550Mhz(Onyx)を発掘しました。こいつをサーバにしました。
 
-| 初めは、FreeBSD/ppcに挑戦したんですが、fdiskが無いようでディスクのパーティショニングが面倒なので保留。
-| 
+初めは、FreeBSD/ppcに挑戦したんですが、fdiskが無いようでディスクのパーティショニングが面倒なので保留。
 debian-504-powerpc-netinst.iso(180MB)をCDに焼いて、内蔵CD-ROMドライブからC起動します。勝手にOpenFirmwareからブートローダが呼び出されるので'install
 G4'でインストーラーを起動します。(plain
 optionってそのままコマンドに続けて書けばいいの？)
@@ -19,12 +18,7 @@ optionってそのままコマンドに続けて書けばいいの？)
 
 netinstよりさらに軽量のdebian-504-powerpc-businesscard.iso(40MB)でなんとかインストールが完了。あとちょっとで失敗するところだった。なんかドライブがガチャガチャ音がしはじめてたし。インストール後はaptitudeさんに頼んでアップデートしたり、SSHやらなにやら入れておきました。lennyではPowerpc-utilsがうまく動かないためにディスプレイを閉じても煌々とバックライトが点灯したままで、非常に勿体無いんですがどうにもならず、lennyからsqueezeにアップデート。するとうまく省電力機能が働いてディスプレイがちゃんと消えるようになりました。あとはトンネル掘れるようにSSH入れて、DynDNSにお世話になったりして、無事構築が完了。めでたしめでたし。
 
-作業の断片(あんまり関係ない)
 
-    | dev / ls
-    |  devalias
-    |  boot usb1/disk@1:2,\\install\\yaboot
+http://old.nabble.com/yaboot-failure-on-external-drive-td28061025.html
 
-    | http://old.nabble.com/yaboot-failure-on-external-drive-td28061025.html
-    | 
-    http://www.debian.org/releases/3.1/powerpc/ch05s01.html.ja#boot-newworld
+http://www.debian.org/releases/3.1/powerpc/ch05s01.html.ja#boot-newworld

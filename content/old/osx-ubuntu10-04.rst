@@ -15,17 +15,25 @@ BootCampAssistantを使ってパーティションをリサイズして、新し
 
 |image1|
 
-| 特別問題が起こることもなくインストール完了。\ `このページ`_\ にはrEFItを入れて、パーティションテーブルを修正しろと書いてあったんですが、その必要はありませんでした。
-|  インストール後のMacBookPro用の設定方法は
-|  https://help.ubuntu.com/community/MacBookPro
-| 
+特別問題が起こることもなくインストール完了。\ `このページ`_\ にはrEFItを入れて、パーティションテーブルを修正しろと書いてあったんですが、その必要はありませんでした。
+
+インストール後のMacBookPro用の設定方法は
+
+https://help.ubuntu.com/community/MacBookPro
+
 に書いてあるので、ここから自分のモデル、MacBookPro5,5の項に書いてある通りに設定します。
-|  ただ、
+
+ただ、
+
+.. code-block:: console
 
     sudo add-apt-repository ppa:mactel-support && apt-get update
 
-| をした後、source.listに追加されるレポジトリのURLが間違っているので修正します。suport→support
-|  そして以下のコマンドを実行して、レポジトリの公開鍵を保存します。
+をした後、source.listに追加されるレポジトリのURLが間違っているので修正します。suport→support
+
+そして以下のコマンドを実行して、レポジトリの公開鍵を保存します。
+
+.. code-block:: console
 
     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys
     2B97B7B8

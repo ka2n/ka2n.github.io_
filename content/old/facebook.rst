@@ -6,15 +6,16 @@
 :tags: facebook
 :slug: facebook
 
-| 自分の周りでもずいぶんとFacebookが普及してきた感じがします。チャット機能もついているので、そこで会話することもしばしば。
-| 
+自分の周りでもずいぶんとFacebookが普及してきた感じがします。チャット機能もついているので、そこで会話することもしばしば。
+
 このFacebookチャット、普通のメッセンジャーアプリでも利用出来るんです。
 
-| |image0|
-|  `Facebookチャット`_
+|image0|
 
-| XMPPに対応したチャットサーバをFacebookは持っているので、それに対応したクライアントアプリであれば利用できます。
-|  具体的には
+`Facebookチャット`_
+
+XMPPに対応したチャットサーバをFacebookは持っているので、それに対応したクライアントアプリであれば利用できます。
+具体的には
 
 -  `Pidgin`_ - Windows/Mac/Linux
 -  `Adium`_ - Mac
@@ -22,8 +23,8 @@
 
 などなど。
 
-| 設定情報はここから見ることができます。
-|  http://www.facebook.com/sitetour/chat.php
+設定情報はここから見ることができます。
+http://www.facebook.com/sitetour/chat.php
 
 各クライアントですでに、"Facebook"として対応しているものも多いですね。
 
@@ -31,22 +32,23 @@ iChatでやってみた
 -----------------
 
 | まずはiChatを起動( `このリンクから起動できます`_ )
-|  |image1|
+| |image1|
 
 | メニューの"iChat" > "環境設定" ( もしくはCommand - , )
-|  |image2|
+| |image2|
 
 | 環境設定画面、左下の"+"ボタンをクリック
-|  |image3|
+| |image3|
 
 | アカウントの種類は"Jabber"を選択する
-|  |image4|
-|  アカウント名:@chat.facebook.com
-|  パスワード:
-|  サーバ: chat.facebook.com
-|  ポート: 5222
-|  「SSLを使用」のチェックボックスは外す
-|  「認証にKerberos v5を使用」はそのまま。
+| |image4|
+
+    - アカウント名:@chat.facebook.com
+    - パスワード:
+    - サーバ: chat.facebook.com
+    - ポート: 5222
+    - 「SSLを使用」のチェックボックスは外す
+    - 「認証にKerberos v5を使用」はそのまま。
 
 完了ボタンを押せば設定完了
 

@@ -6,17 +6,18 @@
 :tags: Python
 :slug: 371
 
-Pythonで正規表現をつかって、文字を調べるする。h
+Pythonで正規表現をつかって、文字を調べる。
 
-| [code lang="python"]
-|  import re
-|  query = u'漢字、ひらがな'
-|  if(re.search(u'^[ぁ-ゞ]\*$', query)): #すべてひらがなかどうかを判別
-|  print('ひらがな')
-|  elif(re.search(u'^([ぁ-ゞ]\|[ァ-ヾ]\|[亜-黑])\*$', query)):
-|  #すべてひらがな、カタカナ(全角)、漢字かどうかを判別
-|  print('かんじ')
-|  [/code]
+.. code-block:: python
 
-| #10/15追記
-|  最後の動かないですね！
+    import re
+    query = u'漢字、ひらがな'
+    if(re.search(u'^[ぁ-ゞ]\*$', query)): #すべてひらがなかどうかを判別
+        print('ひらがな')
+    elif(re.search(u'^([ぁ-ゞ]\|[ァ-ヾ]\|[亜-黑])\*$', query)):
+        #すべてひらがな、カタカナ(全角)、漢字かどうかを判別
+        print('かんじ')
+
+
+#10/15追記
+最後の動かないですね！

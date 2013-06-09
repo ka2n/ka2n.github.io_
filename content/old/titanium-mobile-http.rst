@@ -10,73 +10,76 @@ Titanium mobileでHTTP通信
 
 TitaniumでHTTPClientを使った通信、HTTPリクエストを送ってJSONでレスポンスもらったりしてみる。
 
-| https://code.google.com/p/titanium-mobile-doc-ja/wiki/guides_network_httpclient
-|  [code]
-|  // オフラインなら処理しないようにしたほうがいいですよね！
-|  if(Titanium.Network.online == false){
-|  ?? ?? // エラー表示
-|  ?? ?? return;
-|  }
+https://code.google.com/p/titanium-mobile-doc-ja/wiki/guides_network_httpclient
 
-| // オブジェクトを生成します。
-|  var xhr = Titanium.Network.createHTTPClient();
+.. code-block:: javascript
 
-| // 第一引数はHTTP Method(GETかPOSTがほとんどだと思いますが)
-|  // 第二引数はURIです。
-| 
-xhr.open('GET','http://search.twitter.com/search.json?q=%23titanium');
+    // オフラインなら処理しないようにしたほうがいいですよね！
+    if(Titanium.Network.online == false){
+        // エラー表示
+        return;
+    }
 
-| // レスポンスを受け取るイベント
-|  xhr.onload = function(){
-|  ?? ?? alert(this.responseText);
-|  ?? ?? /\*
-|  ?? ?? // これと同義
-|  ?? ?? xhr.onreadystatechange = function(){
-|  ?? ?? ?? ?? if(this.readyState == xhr.DONE){
-|  ?? ?? ?? ?? ?? ?? alert(this.responseText);
-|  ?? ?? ?? ?? }
-|  ?? ?? };
-|  ?? ?? \*/
-|  };
+    // オブジェクトを生成します。
+    var xhr = Titanium.Network.createHTTPClient();
 
-| // エラー発生時のイベント
-|  xhr.onerror = function(error){
-|  ?? ?? // errorにはエラー事由の文字列オブジェクトが入ってくる。
-|  };
+    // 第一引数はHTTP Method(GETかPOSTがほとんどだと思いますが)
+    // 第二引数はURIです。
 
-| //
-リクエスト送信します。(引数としてJSON値を入れるとパラメータ化される)
-|  xhr.send();
-|  /\*
-|  ??xhr.send({
-|  ?? ?? ??q : 'querystring',
-|  ?? ?? ??param\_name : 'param\_value'
-|  ??});
-|  ??\*/
-|  [/code]
+    xhr.open('GET','http://search.twitter.com/search.json?q=%23titanium');
 
-| ええと、この中の、
-|  [code]
-|  //
-リクエスト送信します。(引数としてJSON値を入れるとパラメータ化される)
-|  xhr.send();
-|  [/code]
+    // レスポンスを受け取るイベント
+    xhr.onload = function(){
+    alert(this.responseText);
+    /*
+    // これと同義
+    xhr.onreadystatechange = function(){
+        if(this.readyState == xhr.DONE){
+            alert(this.responseText);
+        }
+    };
+    */
+    };
 
-| という所。それが当たり前なのかもしれませんが、
-|  [code]
-| 
-xhr.open('GET','http://search.twitter.com/search.json?q=%23titanium');
-|  [/code]
-|  とGETでリクエストすると指定してあったとしても、
-|  [code]
-|  var param = {
-|  book : '1',
-|  name:'hoge',
-|  kind:'hage'
-|  }
-|  xhr.send(param);
-|  [/code]
-|  としてJSONを渡してしまうとリクエストはPOSTになるので注意。
+    // エラー発生時のイベント
+    xhr.onerror = function(error){
+    // errorにはエラー事由の文字列オブジェクトが入ってくる。
+    };
 
-iPhone
-Simulatorが行っている通信をキャプチャする楽な方法がないものか…今はWireSharkを使っています
+    // リクエスト送信します。(引数としてJSON値を入れるとパラメータ化される)
+    xhr.send();
+    /*
+    xhr.send({
+        q : 'querystring',
+        param_name : 'param_value'
+    });
+    */
+
+
+ええと、この中の、
+
+.. code-block:: javascript
+
+    // リクエスト送信します。(引数としてJSON値を入れるとパラメータ化される)
+    xhr.send();
+
+という所。それが当たり前なのかもしれませんが、
+
+.. code-block:: javascript
+
+    xhr.open('GET','http://search.twitter.com/search.json?q=%23titanium');
+
+とGETでリクエストすると指定してあったとしても、
+
+.. code-block:: javascript
+
+    var param = {
+    book : '1',
+    name:'hoge',
+    kind:'hage'
+    }
+    xhr.send(param);
+
+としてJSONを渡してしまうとリクエストは **勝手** にPOSTになるので注意。
+
+iPhone Simulatorが行っている通信をキャプチャする楽な方法がないものか…今はWireSharkを使っています
