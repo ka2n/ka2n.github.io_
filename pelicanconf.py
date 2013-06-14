@@ -35,3 +35,7 @@ ARTICLE_SAVE_AS = '-/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 
 # Format
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
+
+FILES_TO_COPY = (
+        ('extra/CNAME', 'CNAME'),
+)
