@@ -32,6 +32,7 @@ DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 
 FILES_TO_COPY = (
         ('extra/CNAME', 'CNAME'),
+        ('extra/favicon.ico', 'favicon.ico'),
 )
 
 # Blogroll
