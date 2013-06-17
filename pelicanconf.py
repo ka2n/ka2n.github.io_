@@ -16,18 +16,12 @@ FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
-# Blogroll
-LINKS =  ()
-
-# Social widget
-SOCIAL = ()
-
 DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 
-THEME="ktmtt"
+THEME="./themes/ktmtt"
 
 # URL
 ARTICLE_URL = '-/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
@@ -39,3 +33,13 @@ DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 FILES_TO_COPY = (
         ('extra/CNAME', 'CNAME'),
 )
+
+# Blogroll
+LINKS =  ()
+
+# Social widget
+SOCIAL = ()
+
+TWITTER_USERNAME = 'ka2n'
+
+GOOGLE_ANALYTICS = "UA-62172-11"
