@@ -1,4 +1,4 @@
-Named conditional routing in FuelPHP
+Named routing with regexp in FuelPHP
 ################################################################
 :date: 2013-06-25 23:41
 :author: ka2n
