@@ -12,11 +12,7 @@
     <abbr class="published" title="{{ article.date.isoformat() }}">
       {{ article.locale_date }}
     </abbr>
-    {% if article.author %}
-    <address class="vcard author">
-      By <a class="url fn" href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
-    </address>
-    {% endif %}
+    {% if article.tags %}<abbr>tags: {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>&nbsp;{% endfor %}</abbr>{% endif %}
   </footer><!-- /.post-info -->
   <div class="entry-content">
     {{ article.content }}
