@@ -35,6 +35,8 @@ FILES_TO_COPY = (
         ('extra/favicon.ico', 'favicon.ico'),
 )
 
+STATIC_PATHS = ["images", "files",]
+
 # Blogroll
 LINKS =  ()
 
