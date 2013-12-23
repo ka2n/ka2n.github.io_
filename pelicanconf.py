@@ -48,7 +48,8 @@ READERS = {
 }
 
 MENUITEMS = (
-        ('GitHub', 'http://github.com/ka2n'),
+        ('@ka2n', 'https://twitter.com/ka2n'),
+        ('GitHub', 'https://github.com/ka2n'),
 )
 
 # Plugin
