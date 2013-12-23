@@ -13,7 +13,7 @@ TIMEZONE = 'Asia/Tokyo'
 DEFAULT_LANG = u'ja'
 
 # Feed generation is usually not desired when developing
-FEED_RSS = 'feeds/rss.xml'
+FEED_RSS = 'feeds/atom.xml'
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
@@ -50,8 +50,8 @@ READERS = {
 }
 
 MENUITEMS = (
-        ('@ka2n', 'https://twitter.com/ka2n'),
-        ('GitHub', 'https://github.com/ka2n'),
+    ('@ka2n', 'https://twitter.com/ka2n'),
+    ('GitHub', 'https://github.com/ka2n'),
 )
 
 # Plugin
