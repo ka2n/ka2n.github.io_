@@ -13,9 +13,11 @@ TIMEZONE = 'Asia/Tokyo'
 DEFAULT_LANG = u'ja'
 
 # Feed generation is usually not desired when developing
+FEED_RSS = 'feeds/rss.xml'
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
+FEED_MAX_ITEMS = 20
 
 DEFAULT_PAGINATION = 12
 
