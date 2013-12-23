@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="pure-u-3-4 margin-blue">
+    <h1 class="h1-pad">
+        {% block pagetitle %}
+            {% if not articles_page.has_previous() %}
+                Latest posts
+            {% else %}
+                Posts
+            {% endif %}
+        {% endblock pagetitle %}
+        {% if articles_page.has_previous() %}
+            &ndash; Page&nbsp;{{ articles_page.number }}
+        {% endif %}
+    </h1>
+</div>
+<div class="pure-u-3-4">
+{% for art in articles_page.object_list %}
+    {% if art.category == category %}
+    <div class="article-item margin-yellow pure-g">
+    {% else %}
+    <div class="article-item margin-blue pure-g">
+    {% endif %}
+        <div class="pure-u">
+            <img class="author-avatar" alt="{{ art.author.name }}" src="{{ art.author_gravatar }}" height="64" width="64">
+        </div>
+
+        <div class="pure-u-3-4">
+            <h4 class="article-title">
+                <a href="{{ SITEURL }}/{{ art.url }}" rel='bookmark'>{{ art.title }}</a>
+                <p class="pure-u-1 email-desc2">
+                    {{ art.locale_date }}
+                </p>
+            </h4>
+            <div class="article-summary">
+                {{ art.summary }}
+            </div>
+        </div>
+    </div>
+{% endfor %}
+{% include 'pagination.html' %}
+</div>
+{% endblock content %}

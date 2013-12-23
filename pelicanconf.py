@@ -3,25 +3,26 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'ka2n'
+AUTHOR_EMAIL = u'katsumai@gmail.com'
 SITENAME = u'ktmtt'
-SITESUBTITLE = u'シンプルになりました'
-SITEURL = ''
+SITESUBTITLE = u''
+SITEURL = 'http://d.ktmtt.com'
 
 TIMEZONE = 'Asia/Tokyo'
 
-DEFAULT_LANG = u'en'
+DEFAULT_LANG = u'ja'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
-DEFAULT_PAGINATION = False
+DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 
-THEME="./themes/ktmtt"
+THEME = "./themes/pure"
 
 # URL
 ARTICLE_URL = '-/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
@@ -30,15 +31,32 @@ ARTICLE_SAVE_AS = '-/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 # Format
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 
-FILES_TO_COPY = (
-        ('extra/CNAME', 'CNAME'),
-        ('extra/favicon.ico', 'favicon.ico'),
+STATIC_PATHS = [
+    "images",
+    "files",
+    "extra/CNAME",
+    "extra/favicon.ico"
+]
+
+EXTRA_PATH_METADATA = {
+    "extra/CNAME": {'path': 'CNAME'},
+    "extra/favicon.ico": {'path': 'favicon.ico'}
+}
+
+READERS = {
+    "html": None
+}
+
+MENUITEMS = (
+        ('GitHub', 'http://github.com/ka2n'),
 )
 
-STATIC_PATHS = ["images", "files",]
+# Plugin
+PLUGIN_PATH = './plugins'
+PLUGINS = ["gravatar"]
 
 # Blogroll
-LINKS =  ()
+LINKS = ()
 
 # Social widget
 SOCIAL = ()
