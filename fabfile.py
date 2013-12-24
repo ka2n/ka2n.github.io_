@@ -44,5 +44,4 @@ def github():
     """upload the web site via gh-pages"""
     rebuild()
     if os.path.isdir(DEPLOY_PATH):
-        local('ghp-import {deploy_path}'.format(**env))
-        local('git push origin gh-pages')
+        local('ghp-import -p -b master {deploy_path}'.format(**env))
