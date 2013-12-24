@@ -1,0 +1,13 @@
+reSTむずい
+==============================================
+:date: 2013-12-25 01:42
+:author: ka2n
+
+reStructedTextは拡張可能だし、なんでも書ける気がするんだけどなかなか覚えられない。今も脚注が上手く書けなくて困っている。 
+Markdownの方が直感的だなぁと思う。とは言うもののこっちはこっちで亜種が多く戸惑う。(GFM_ ばっかり書いてるけどビューアーの挙動が違うとか)
+
+まずはここれを覚えよう。
+
+http://www.planewave.org/translations/rst/quickref.html
+
+.. _GFM: http://github.github.com/github-flavored-markdown/
