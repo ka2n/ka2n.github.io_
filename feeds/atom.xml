@@ -16,7 +16,7 @@ Markdownの方が直感的だなぁと思う。とは言うもののこっちは
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;SpeechSynthesisUtteranceのlangが空だった場合は端末の言語に合せてくれる模様。&lt;/p&gt;
 &lt;p&gt;テストページを作りました。
-&lt;a class="reference external" href="|filename|files/ios7_webspeech_test.html"&gt;iOS7 webspeech test(iOS7で見て下さい)&lt;/a&gt;&lt;/p&gt;
+&lt;a class="reference external" href="http://d.ktmtt.com/content/files/ios7_webspeech_test.html"&gt;iOS7 webspeech test(iOS7で見て下さい)&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;注意が必要なのは、ボタンを押すなどのユーザーによる操作の後にしか動作しない点
 なかなか面白いAPIですね。口を動かすのが面倒な時に使ってみてはいかがでしょうか。&lt;/p&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Fri, 20 Sep 2013 07:50:00 +0900</pubDate><guid>tag:d.ktmtt.com,2013-09-20:-/2013/09/20/ios7_webspeech_test/</guid><category>iOS</category><category>HTML</category></item><item><title>Named routing with regexp in FuelPHP</title><link>http://d.ktmtt.com/-/2013/06/25/named-routing-with-regexp-in-fuelphp/</link><description>&lt;p&gt;FuelPHPでルーティングルールを設定する時, (:segment)や(:num),(:alpha)等を使えます。
