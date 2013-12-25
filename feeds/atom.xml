@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ktmtt</title><link>http://d.ktmtt.com/</link><description></description><atom:link href="http://d.ktmtt.com/feeds/atom.xml" rel="self"></atom:link><lastBuildDate>Wed, 25 Dec 2013 01:42:00 +0900</lastBuildDate><item><title>reSTむずい</title><link>http://d.ktmtt.com/-/2013/12/25/restmuzui/</link><description>&lt;p&gt;reStructedTextは拡張可能だし、なんでも書ける気がするんだけどなかなか覚えられない。今も脚注が上手く書けなくて困っている。
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ktmtt</title><link>http://d.ktmtt.com/</link><description></description><atom:link href="http://d.ktmtt.com/feeds/atom.xml" rel="self"></atom:link><lastBuildDate>Wed, 25 Dec 2013 13:15:00 +0900</lastBuildDate><item><title>datetime.datetimeをYYYY-MM-DDTHH:MM:SS文字列にする</title><link>http://d.ktmtt.com/-/2013/12/25/datetimedatetimewoyyyy-mm-ddthhmmsswen-zi-lie-nisuru/</link><description>&lt;p&gt;何も考えないで作ると、高精度のdatetime.datetimeオブジェクトになっている
+余計な情報を削りたかった&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;datetime&lt;/span&gt;
+&lt;span class="n"&gt;now&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;now&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;now&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isoforat&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;span class="c"&gt;# =&amp;gt; &amp;#39;2013-12-25T13:06:27.574037&amp;#39;&lt;/span&gt;
+&lt;span class="c"&gt;# YYYY-MM-DDTHH:MM:SS.mmmmmm の形式になっている&lt;/span&gt;
+&lt;span class="c"&gt;# マイクロ秒が余分&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;datetime&lt;/span&gt;
+&lt;span class="n"&gt;now&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;now&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;microsecond&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;tzinfo&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c"&gt;# マイクロ秒に0を指定する。ついでにタイムゾーンも無しにする&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;now&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isoforat&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;span class="c"&gt;# =&amp;gt; 2013-12-25T13:06:27&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Pythonのdatetimeオブジェクトはタイムゾーンとか考える事が多くて苦手意識持ってたんだけど、
+他の言語でもそれなりに面倒なので諦めた。&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Wed, 25 Dec 2013 13:15:00 +0900</pubDate><guid>tag:d.ktmtt.com,2013-12-25:-/2013/12/25/datetimedatetimewoyyyy-mm-ddthhmmsswen-zi-lie-nisuru/</guid></item><item><title>reSTむずい</title><link>http://d.ktmtt.com/-/2013/12/25/restmuzui/</link><description>&lt;p&gt;reStructedTextは拡張可能だし、なんでも書ける気がするんだけどなかなか覚えられない。今も脚注が上手く書けなくて困っている。
 Markdownの方が直感的だなぁと思う。とは言うもののこっちはこっちで亜種が多く戸惑う。(&lt;a class="reference external" href="http://github.github.com/github-flavored-markdown/"&gt;GFM&lt;/a&gt; ばっかり書いてるけどビューアーの挙動が違うとか)&lt;/p&gt;
 &lt;p&gt;まずはここれを覚えよう。&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://www.planewave.org/translations/rst/quickref.html"&gt;http://www.planewave.org/translations/rst/quickref.html&lt;/a&gt;&lt;/p&gt;
@@ -373,213 +390,4 @@ mobileで音声ファイルを再生したい時はTi.Media.sound周りなどを
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Fri, 03 Feb 2012 15:12:00 +0900</pubDate><guid>tag:d.ktmtt.com,2012-02-03:-/2012/02/03/node-js/</guid><category>nodejs</category></item><item><title>brewに新しいコマンドが増えていた</title><link>http://d.ktmtt.com/-/2012/02/02/brew/</link><description>&lt;p&gt;Macをお使いの方々はパッケージマネージャーにMacPortsかHomebrewのどちらかをお使いかと思いますが、前日brew-updateしたらHomebrewにコマンドが増えていました。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;$&lt;/span&gt; brew beer
 &lt;/pre&gt;&lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Thu, 02 Feb 2012 10:52:00 +0900</pubDate><guid>tag:d.ktmtt.com,2012-02-02:-/2012/02/02/brew/</guid></item><item><title>スマートフォンとPCで表示するViewを変更 #FuelPHP</title><link>http://d.ktmtt.com/-/2012/01/20/pc-view-fuelphp/</link><description>&lt;p&gt;最近FuelPHP初めましたっ///&lt;/p&gt;
-&lt;p&gt;同一のURLでPCとスマートフォンに対応したいですよね。&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;CSS3 Media Queriesを使ってクライアントサイドで振り分ける&lt;/li&gt;
-&lt;li&gt;UserAgentを見てサーバサイドで振り分ける&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;なんて方法があると思います。
-全部Media Queriesを使ってやろうとすると、スマホ用とPC用とPad用でごっちゃごちゃになっちゃいそうです。
-まず、PCとスマホ/Padで分けてから、Media QueriesでスマホとPadで分けるのがいいんじゃないかと個人的には思います。
-スマホとPadはタッチデバイス(であることが多い)ですからね。&lt;/p&gt;
-&lt;p&gt;FuelPHPには、UserAgent周りを扱うAgentクラスがありますのでそれを使います。
-あと、Themeクラスなんていうものもあります(これなぜかドキュメントに載っていない)。
-この2つを使ってみたいと思います。&lt;/p&gt;
-&lt;p&gt;作戦&lt;/p&gt;
-&lt;blockquote&gt;
-FuelのControllerクラスを拡張してAppControllerクラスを作る。
-AppController::beforeでUserAgentを判別し、テーマを切り替える。
-レスポンスはThemeクラスを使って構築する。&lt;/blockquote&gt;
-&lt;p&gt;よし、早速やってみます。&lt;/p&gt;
-&lt;p&gt;APPPATH/classes/controller/app_controller.php&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
-&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;AppController&lt;/span&gt; &lt;span class="k"&gt;extends&lt;/span&gt; &lt;span class="nx"&gt;Fuel\Core\Controller&lt;/span&gt;
-&lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;before&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-    &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;parent&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="na"&gt;before&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;とりあえずこんな感じでファイルを作成します。ちなみにAppControllerとかネーミングは適当デス。&lt;/p&gt;
-&lt;p&gt;このクラスをFuelPHPが動くたびに読み込んでくれるように設定します。&lt;/p&gt;
-&lt;p&gt;APPPATH/bootstrap.php&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
-&lt;span class="o"&gt;...&lt;/span&gt;&lt;span class="err"&gt;略&lt;/span&gt;&lt;span class="o"&gt;...&lt;/span&gt;
-
-&lt;span class="nx"&gt;Autoloader&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="na"&gt;add_classes&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;array&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-    &lt;span class="c1"&gt;// Add classes you want to override here&lt;/span&gt;
-    &lt;span class="c1"&gt;// Example: &amp;#39;View&amp;#39; =&amp;gt; APPPATH.&amp;#39;classes/view.php&amp;#39;,&lt;/span&gt;
-    &lt;span class="s1"&gt;&amp;#39;AppController&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;APPPATH&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;classes/controller/app_controller.php&amp;#39;&lt;/span&gt;
-&lt;span class="p"&gt;));&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;これで、どのクラスからもAppControllerという名前で作成したクラスを呼び出せるようになりました。&lt;/p&gt;
-&lt;p&gt;次に、AgentをつかってUAを判別する部分を書きます。&lt;/p&gt;
-&lt;p&gt;APPPATH/classes/controller/app_controller.php&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
-
-&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;AppController&lt;/span&gt; &lt;span class="k"&gt;extends&lt;/span&gt; &lt;span class="nx"&gt;Fuel\Core\Controller&lt;/span&gt;
-&lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;before&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-    &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;parent&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="na"&gt;before&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-
-    &lt;span class="k"&gt;private&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;is_smartphone&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-    &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;Agent&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="na"&gt;is_mobiledevice&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;こんな感じに書いてみました。Agentクラスはbrowsecap.iniを読み込んでいるのでそれでUAを判別しています。
-今回はPC以外はスマートフォンってことにします。
-あと、SoftBankが見当たらないんですがどうすればいいんでしょうか。フューチャーフォン対応はしないので気にしません。
-Agent::browser();で&amp;quot;DoCoMo&amp;quot;とか取得できるので、フューチャーフォン対応が必要ならそれを使うことになると思います。
-最後に、Themeクラスを使って読み込むViewファイルを切り替えてみます。
-このThemeクラスっていうのがよく分からなくて、それっぽい名前なので使ってみるのですが、本来意図された使い方とは違うかもしれません。&lt;/p&gt;
-&lt;p&gt;Themeクラス自体の使い方はこんな具合です。&lt;/p&gt;
-&lt;p&gt;APPPATH/classes/controller/hogehoge.php&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
-&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Controller_Hogehoge&lt;/span&gt; &lt;span class="k"&gt;extends&lt;/span&gt; &lt;span class="nx"&gt;Controller&lt;/span&gt;
-&lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;before&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-    &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="nv"&gt;$this&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;Theme&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;Theme&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="na"&gt;forge&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;array&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-            &lt;span class="s1"&gt;&amp;#39;active&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;theme1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 現在のテーマ&lt;/span&gt;
-            &lt;span class="s1"&gt;&amp;#39;fallback&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;default&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 現在のテーマに目的のViewファイルが無かった時に探すテーマ&lt;/span&gt;
-            &lt;span class="s1"&gt;&amp;#39;paths&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;array&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;APPPATH&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;views&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="c1"&gt;// テーマディレクトリの検索パス&lt;/span&gt;
-            &lt;span class="s1"&gt;&amp;#39;assets_folder&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;assets&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// assetsのフォルダ名(謎)&lt;/span&gt;
-            &lt;span class="s1"&gt;&amp;#39;view_ext&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;.php&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// Viewファイルの拡張子&lt;/span&gt;
-            &lt;span class="s1"&gt;&amp;#39;require_info_file&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;false&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-            &lt;span class="s1"&gt;&amp;#39;info_file_name&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;theme.info&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="p"&gt;));&lt;/span&gt;
-
-        &lt;span class="c1"&gt;// info_file_nameとかあることを考えると、WordPressみたいなテーマシステムを組み込むためのもの？&lt;/span&gt;
-        &lt;span class="c1"&gt;// forgeの引数に設定を書くと、Themeクラスのデフォルト設定に上書きされる&lt;/span&gt;
-        &lt;span class="c1"&gt;// 設定を書かなければデフォルト値が使われるか、APPPATH/config/theme.phpがあればそれが読み込まれる&lt;/span&gt;
-
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;parent&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="na"&gt;before&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-
-    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;action_welcome&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-    &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;Response&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="na"&gt;forge&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$this&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;Theme&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;view&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;welcome/index&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt; &lt;span class="c1"&gt;// View-&amp;gt;forgeの代わりにTheme::viewを使う&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;ちなみにViewクラスの置き換えはできますが、ViewModelをすることは今のところ出来ないようです。
-上記の呼び出し方の場合、APPPATH/viewsがベースになるので、&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;APPPATH/views/default/&lt;/li&gt;
-&lt;li&gt;APPPATH/views/theme1/&lt;/li&gt;
-&lt;li&gt;APPPATH/views/theme2/&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;上記のパスにそれぞれのビューのファイルを配置します。&lt;/p&gt;
-&lt;p&gt;このThemeクラスを先程のAppControllerに組み込んでみました。&lt;/p&gt;
-&lt;p&gt;APPPATH/classes/controller/app_controller.php&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
-
-&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;AppController&lt;/span&gt; &lt;span class="k"&gt;extends&lt;/span&gt; &lt;span class="nx"&gt;Fuel\Core\Controller&lt;/span&gt;
-&lt;span class="p"&gt;{&lt;/span&gt;
-
-    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;before&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-    &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="nv"&gt;$activeTheme&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;default&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$this&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;is_smartphone&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="nv"&gt;$activeTheme&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;smartphone&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt;
-
-        &lt;span class="nv"&gt;$this&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;Theme&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;Theme&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="na"&gt;forge&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;array&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-            &lt;span class="s1"&gt;&amp;#39;active&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;$activeTheme&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-            &lt;span class="s1"&gt;&amp;#39;fallback&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;default&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-            &lt;span class="s1"&gt;&amp;#39;paths&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;array&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;APPPATH&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;views&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-            &lt;span class="s1"&gt;&amp;#39;view_ext&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;.php&amp;#39;&lt;/span&gt;
-        &lt;span class="p"&gt;));&lt;/span&gt;
-
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;parent&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="na"&gt;before&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-
-    &lt;span class="k"&gt;private&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;is_smartphone&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-    &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;Agent&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="na"&gt;is_mobiledevice&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;UAに対応したテーマ名をThemeクラスに設定してあげているだけです。&lt;/p&gt;
-&lt;p&gt;あとはこんな具合&lt;/p&gt;
-&lt;p&gt;APPPATH/classes/controller/welcome.php&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
-&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Controller_Welcome&lt;/span&gt; &lt;span class="k"&gt;extends&lt;/span&gt; &lt;span class="nx"&gt;AppController&lt;/span&gt;
-&lt;span class="p"&gt;{&lt;/span&gt;
-
-    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;before&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-    &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;parent&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="na"&gt;before&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-
-    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;action_index&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-    &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;Response&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="na"&gt;forge&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$this&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;Theme&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;view&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;welcome/index&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;APPPATH/views/default/welcome/index.php&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;&amp;lt;!DOCTYPE HTML&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;html&lt;/span&gt; &lt;span class="na"&gt;lang=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ja&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;lt;meta&lt;/span&gt; &lt;span class="na"&gt;charset=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;UTF-8&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;lt;title&amp;gt;&lt;/span&gt;PC&lt;span class="nt"&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;このページはPC用です&lt;span class="nt"&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;APPPATH/views/smartphone/welcome/index.php&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;&amp;lt;!DOCTYPE HTML&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;html&lt;/span&gt; &lt;span class="na"&gt;lang=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ja&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;lt;meta&lt;/span&gt; &lt;span class="na"&gt;charset=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;UTF-8&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;lt;meta&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;viewport&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;content=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;width=device-width, initial-scale=1,&lt;/span&gt;
-&lt;span class="s"&gt;        maximum-scale=2&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;lt;title&amp;gt;&lt;/span&gt;スマートフォン/Pad&lt;span class="nt"&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;lt;style&amp;gt;&lt;/span&gt;
-
-            &lt;span class="nc"&gt;.only_for_pad&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                &lt;span class="k"&gt;display&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="k"&gt;none&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-            &lt;span class="p"&gt;}&lt;/span&gt;
-
-            &lt;span class="nc"&gt;.only_for_mobile&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                &lt;span class="k"&gt;display&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="k"&gt;none&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-            &lt;span class="p"&gt;}&lt;/span&gt;
-
-            &lt;span class="k"&gt;@media&lt;/span&gt; &lt;span class="nt"&gt;screen&lt;/span&gt; &lt;span class="nt"&gt;and&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;max-width&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nt"&gt;480px&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                &lt;span class="nc"&gt;.only_for_mobile&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                    &lt;span class="k"&gt;display&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="k"&gt;block&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-                &lt;span class="p"&gt;}&lt;/span&gt;
-            &lt;span class="p"&gt;}&lt;/span&gt;
-
-            &lt;span class="k"&gt;@media&lt;/span&gt; &lt;span class="nt"&gt;only&lt;/span&gt; &lt;span class="nt"&gt;screen&lt;/span&gt; &lt;span class="nt"&gt;and&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;min-device-width&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nt"&gt;768px&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="nt"&gt;and&lt;/span&gt;
-            &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;max-device-width&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nt"&gt;1024px&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                &lt;span class="nc"&gt;.only_for_pad&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                    &lt;span class="k"&gt;display&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="k"&gt;block&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-                &lt;span class="p"&gt;}&lt;/span&gt;
-            &lt;span class="p"&gt;}&lt;/span&gt;
-
-        &lt;span class="nt"&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Padとスマホで表示されるページです。&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;lt;p&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;only_for_pad&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;この文章はPad用です。&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;lt;p&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;only_for_mobile&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;この文章はモバイル用です。&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;div class="section" id="id1"&gt;
-&lt;h2&gt;あとがき&lt;/h2&gt;
-&lt;p&gt;試していないですが、Themeクラスを使わずに
-Fuel::add_pathで単純にパスを追加するだけでViewModelで使えて幸せになれるんじゃないかと思います(今更)&lt;/p&gt;
-&lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Fri, 20 Jan 2012 01:22:00 +0900</pubDate><guid>tag:d.ktmtt.com,2012-01-20:-/2012/01/20/pc-view-fuelphp/</guid><category>fuelphp</category><category>php</category></item></channel></rss>
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Thu, 02 Feb 2012 10:52:00 +0900</pubDate><guid>tag:d.ktmtt.com,2012-02-02:-/2012/02/02/brew/</guid></item></channel></rss>

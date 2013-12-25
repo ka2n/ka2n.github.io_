@@ -17,7 +17,7 @@
 
         <link href="http://d.ktmtt.com/feeds/atom.xml" type="application/atom+xml" rel="alternate" title="ktmtt RSS Feed" />
 
-        <title>Kindle paperwhiteのファームウェアアップデート方法 // ktmtt // </title>
+        <title>datetime.datetimeをYYYY-MM-DDTHH:MM:SS文字列にする // ktmtt // </title>
 </head>
 
 <body>
@@ -95,28 +95,32 @@
         <div class="article-content margin-blue">
             <div class="article-content-header pure-g">
                 <div class="pure-u-1">
-                    <h1 class="article-content-title">Kindle paperwhiteのファームウェアアップデート方法</h1>
+                    <h1 class="article-content-title">datetime.datetimeをYYYY-MM-DDTHH:MM:SS文字列にする</h1>
                     <p class="article-content-subtitle">
-                        by <a href="../../../../../author/ka2n.html">ka2n</a> on <span>2012-12-12</span>
-                        // Posted in <a href="../../../../../category/general.html">general</a>
-                            // under                                 <a class="post-category post-category-design" href="../../../../../tag/kindle.html">kindle</a>
+                        by <a href="../../../../../author/ka2n.html">ka2n</a> on <span>2013-12-25</span>
+                        // Posted in <a href="../../../../../category/content.html">content</a>
                     </p>
                 </div>
             </div>
             <div class="article-content-body">
                 <p>
-                    <ol class="arabic simple">
-<li><a class="reference external" href="http://www.amazon.co.uk/gp/help/customer/display.html/?nodeId=201063560">ここ</a>を開きます</li>
-<li><strong>Download Version
-5.3.1</strong>と書いてある所からファームウェアをダウンロードします</li>
-<li>kindleをUSBでPCに繋ぎます</li>
-<li>Kindleがマウントされるのでダウンロードしたファイルをそこへそのまま突っ込みます</li>
-<li>突っ込み終わったらアンマウントします</li>
-<li>kindleの右上のメニュー &gt; 設定 &gt; 右上のメニュー &gt;
-Kindleのアップデートを行う を選択します</li>
-<li>確認のダイアログがでるので、OKします</li>
-<li>すると勝手に再起動してアップデートが実行されます</li>
-</ol>
+                    <p>何も考えないで作ると、高精度のdatetime.datetimeオブジェクトになっている
+余計な情報を削りたかった</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">datetime</span>
+<span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">now</span><span class="o">.</span><span class="n">isoforat</span><span class="p">())</span>
+<span class="c"># =&gt; &#39;2013-12-25T13:06:27.574037&#39;</span>
+<span class="c"># YYYY-MM-DDTHH:MM:SS.mmmmmm の形式になっている</span>
+<span class="c"># マイクロ秒が余分</span>
+</pre></div>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">datetime</span>
+<span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">microsecond</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+<span class="c"># マイクロ秒に0を指定する。ついでにタイムゾーンも無しにする</span>
+<span class="k">print</span><span class="p">(</span><span class="n">now</span><span class="o">.</span><span class="n">isoforat</span><span class="p">())</span>
+<span class="c"># =&gt; 2013-12-25T13:06:27</span>
+</pre></div>
+<p>Pythonのdatetimeオブジェクトはタイムゾーンとか考える事が多くて苦手意識持ってたんだけど、
+他の言語でもそれなりに面倒なので諦めた。</p>
 
                 </p>
  
