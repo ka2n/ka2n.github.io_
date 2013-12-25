@@ -32,7 +32,8 @@ def new(filename=None):
 
     template = open(TEMPLTE_PATH).read()
     new_file_body = template.format(**payload)
-    local('echo "{0}" | vim - -c ":file {1} |filetype detect"'.format(new_file_body, new_file_path))
+    local('echo "{0}" | vim - -c "file {1} |filetype detect"'.format(
+        new_file_body, new_file_path))
 
 
 def clean():
