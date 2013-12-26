@@ -1,0 +1,12 @@
+fabricでブログを書きやすくするためのコマンドを設定した
+==============================================================
+:date: 2013-12-26
+:author: ka2n
+:status: draft
+
+このブログを書くのに Pelican_ を使っているのだけど書き始めるのに
+タイトルを決めてファイルを先に作らないといけないのが面倒だったので
+fabfile.pyに新規作成用のタスクを追加した。
+ちなみにPelicanは楽にパブリッシュするためにMakefileかfabfile.pyを生成してくれる。
+
+.. _Pelican: https://github.com/getpelican/pelican
