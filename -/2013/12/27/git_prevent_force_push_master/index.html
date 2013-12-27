@@ -18,14 +18,14 @@
     <link rel="author" href="https://plus.google.com/+KatsumaIto/posts" />
 
     <!-- Open Graph tags -->
-            <meta property="og:type" content="website"/>
-            <meta property="og:title" content="ktmtt"/>
-            <meta property="og:url" content="http://d.ktmtt.com"/>
-            <meta property="og:description" content="ktmtt"/>
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="masterへのforce pushとdeleteを防ぐpre-pushフック"/>
+            <meta property="og:url" content="http://d.ktmtt.com/-/2013/12/27/git_prevent_force_push_master/"/>
+            <meta property="og:description" content="やるなと言われればそうなんだけど、対策する"/>
 
         <link href="http://d.ktmtt.com/feeds/atom.xml" type="application/atom+xml" rel="alternate" title="ktmtt RSS Feed" />
 
-        <title>javascript tag // ktmtt // </title>
+        <title>masterへのforce pushとdeleteを防ぐpre-pushフック // ktmtt // </title>
 </head>
 
 <body>
@@ -51,7 +51,7 @@
                             <li><a href="http://d.ktmtt.com/tag/foo.html"><span class="cat-label-blue"></span>foo</a></li>
                             <li><a href="http://d.ktmtt.com/tag/fitbit.html"><span class="cat-label-blue"></span>fitbit</a></li>
                             <li><a href="http://d.ktmtt.com/tag/coolbook.html"><span class="cat-label-blue"></span>CoolBook</a></li>
-                            <li><a href="http://d.ktmtt.com/tag/javascript.html"><span class="cat-label-yellow"<span class="cat-label-blue"></span>javascript</a></li>
+                            <li><a href="http://d.ktmtt.com/tag/javascript.html"><span class="cat-label-blue"></span>javascript</a></li>
                             <li><a href="http://d.ktmtt.com/tag/fuelphp.html"><span class="cat-label-blue"></span>FuelPHP</a></li>
                             <li><a href="http://d.ktmtt.com/tag/bar.html"><span class="cat-label-blue"></span>bar</a></li>
                             <li><a href="http://d.ktmtt.com/tag/php.html"><span class="cat-label-blue"></span>php</a></li>
@@ -101,73 +101,77 @@
             </div>
         </div>
 
-<div class="pure-u-3-4 margin-blue">
-    <h1 class="h1-pad">
-Posts tagged 'javascript'    </h1>
-</div>
-<div class="pure-u-3-4">
-    <div class="article-item margin-blue pure-g">
-        <div class="pure-u">
-            <img class="author-avatar" alt="ka2n" src="http://www.gravatar.com/avatar/6041a51295536d946d4554a1905b3097" height="64" width="64">
-        </div>
+    <div class="pure-u-3-4">
+        <div class="article-content margin-blue">
+            <div class="article-content-header pure-g">
+                <div class="pure-u-1">
+                    <h1 class="article-content-title">masterへのforce pushとdeleteを防ぐpre-pushフック</h1>
+                    <p class="article-content-subtitle">
+                        by <a href="http://d.ktmtt.com/author/ka2n.html">ka2n</a> on <span>2013-12-27</span>
+                        // Posted in <a href="http://d.ktmtt.com/category/dev.html">dev</a>
+                            // under                                 <a class="post-category post-category-design" href="http://d.ktmtt.com/tag/git.html">git</a>
+                    </p>
+                </div>
+            </div>
+            <div class="article-content-body">
+                <p>
+                    <p>やるな、と言われればそうなんだけど
+うっかりmasterに <tt class="docutils literal">git push <span class="pre">--force</span></tt> とかやりそうになると背筋が凍る。
+gitにはpre-pushフックがあるみたいなのでここで禁止することにした。
+調べてみたら、 <a class="reference external" href="https://gist.github.com/pixelhandler/5718585">良い感じ</a> なフックがあったのでこれを使うことにした(ちょっといじった)</p>
+<p><cite>.git/hooks/pre-push</cite></p>
+<div class="highlight"><pre><span class="nv">protected_branches</span><span class="o">=(</span> production master <span class="o">)</span>
+<span class="k">for </span>i in <span class="s2">&quot;${protected_branches[@]}&quot;</span>
+<span class="k">do</span>
 
-        <div class="pure-u-3-4">
-            <h4 class="article-title">
-                <a href="http://d.ktmtt.com/-/2012/06/03/gurad-jsx/" rel='bookmark'>GuradでJSXでの開発を快適に</a>
-                <p class="pure-u-1 email-desc2">
-                    2012-06-03
+<span class="k">    </span><span class="nv">protected_branch</span><span class="o">=</span><span class="nv">$i</span>
+
+    <span class="nv">policy</span><span class="o">=</span><span class="s1">&#39;[Policy] Never push, force push or delete the &#39;</span><span class="nv">$protected_branch</span><span class="s1">&#39; branch! (Prevented with pre-push hook.)&#39;</span>
+
+    <span class="nv">current_branch</span><span class="o">=</span><span class="k">$(</span>git symbolic-ref HEAD | sed -e <span class="s1">&#39;s,.*/\(.*\),\1,&#39;</span><span class="k">)</span>
+
+    <span class="nv">push_command</span><span class="o">=</span><span class="k">$(</span>ps -ocommand<span class="o">=</span> -p <span class="nv">$PPID</span><span class="k">)</span>
+
+    <span class="nv">is_destructive</span><span class="o">=</span><span class="s1">&#39;\-\-force|\-\-delete|\-f&#39;</span>
+
+    <span class="nv">will_remove_protected_branch</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="nv">$protected_branch</span>
+
+    do_exit<span class="o">(){</span>
+      <span class="nb">echo</span> <span class="nv">$policy</span>
+      <span class="nb">exit </span>1
+    <span class="o">}</span>
+
+    <span class="k">if</span> <span class="o">[[</span> <span class="nv">$push_command</span> <span class="o">=</span>~ <span class="nv">$is_destructive</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="o">[</span> <span class="nv">$current_branch</span> <span class="o">=</span> <span class="nv">$protected_branch</span> <span class="o">]</span>; <span class="k">then</span>
+<span class="k">      </span>do_exit
+    <span class="k">fi</span>
+
+<span class="k">    if</span> <span class="o">[[</span> <span class="nv">$push_command</span> <span class="o">=</span>~ <span class="nv">$is_destructive</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="o">[[</span> <span class="nv">$push_command</span> <span class="o">=</span>~ <span class="nv">$protected_branch</span> <span class="o">]]</span>; <span class="k">then</span>
+<span class="k">      </span>do_exit
+    <span class="k">fi</span>
+
+<span class="k">    if</span> <span class="o">[[</span> <span class="nv">$push_command</span> <span class="o">=</span>~ <span class="nv">$will_remove_protected_branch</span> <span class="o">]]</span>; <span class="k">then</span>
+<span class="k">      </span>do_exit
+    <span class="k">fi</span>
+<span class="k">done</span>
+
+<span class="nb">unset </span>do_exit
+
+<span class="nb">exit </span>0
+</pre></div>
+<p><tt class="docutils literal">protected_branches</tt> に列挙したブランチに</p>
+<ul class="simple">
+<li><tt class="docutils literal">git push <span class="pre">--force</span></tt></li>
+<li><tt class="docutils literal">git push <span class="pre">-f</span></tt></li>
+<li><tt class="docutils literal">git push <span class="pre">--delete</span></tt></li>
+<li><tt class="docutils literal">git push :$branch</tt></li>
+</ul>
+<p>なんてしようとした時に失敗させられる。</p>
+
                 </p>
-            </h4>
-            <div class="article-summary">
-                <p><a class="reference external" href="https://gist.github.com/2863673">https://gist.github.com/2863673</a>
-おもしろそうな上に使えそうなJSX</p>
-
+ 
             </div>
         </div>
     </div>
-    <div class="article-item margin-blue pure-g">
-        <div class="pure-u">
-            <img class="author-avatar" alt="ka2n" src="http://www.gravatar.com/avatar/6041a51295536d946d4554a1905b3097" height="64" width="64">
-        </div>
-
-        <div class="pure-u-3-4">
-            <h4 class="article-title">
-                <a href="http://d.ktmtt.com/-/2010/10/21/380/" rel='bookmark'>追加した要素にイベントハンドラ</a>
-                <p class="pure-u-1 email-desc2">
-                    2010-10-21
-                </p>
-            </h4>
-            <div class="article-summary">
-                <p>脳を溶かすjqueryネタ。</p>
-<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#hige &gt; a&#39;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
-    <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;hage&#39;</span><span class="p">);</span>
-<span class="p">});</span>
-</pre></div>
-<p>なんて書いてあっても、</p>
-<div class="highlight"><pre><span class="p">(</span><span class="s1">&#39;#hige&#39;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;&lt;a href=&quot;.&quot;&gt;追加&lt;/a&gt;&#39;</span><span class="p">);</span>
-</pre></div>
-<p>で追加したやつにはイベントが設定されていないので、反応しない。
-そういう場合は、</p>
-<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#hige &gt; a&#39;</span><span class="p">).</span><span class="nx">live</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
-<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;hage&#39;</span><span class="p">);</span>
-<span class="p">});</span>
-</pre></div>
-<p>と書く。ふむふむ。
-jqueryは卒業したい今日このごろ。</p>
-
-            </div>
-        </div>
-    </div>
-<div class="pagination-wrapper">
-    <div class="pagination">
-        <div class="pagination-left">
-                &nbsp;
-        </div>
-        <span>Page 1 / 1</span>
-        <div class="pagination-right">
-        </div>
-    </div>
-</div></div>
 
         <div class="pure-u-3-4">
             <footer class="footer">

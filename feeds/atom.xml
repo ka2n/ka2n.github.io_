@@ -1,5 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ktmtt</title><link>http://d.ktmtt.com/</link><description></description><atom:link href="http://d.ktmtt.com/feeds/atom.xml" rel="self"></atom:link><lastBuildDate>Thu, 26 Dec 2013 00:00:00 +0900</lastBuildDate><item><title>2013-12-26</title><link>http://d.ktmtt.com/-/2013/12/26/2013-12-26/</link><description>&lt;p&gt;今日はまぁ普通の日だった。&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ktmtt</title><link>http://d.ktmtt.com/</link><description></description><atom:link href="http://d.ktmtt.com/feeds/atom.xml" rel="self"></atom:link><lastBuildDate>Fri, 27 Dec 2013 00:00:00 +0900</lastBuildDate><item><title>masterへのforce pushとdeleteを防ぐpre-pushフック</title><link>http://d.ktmtt.com/-/2013/12/27/git_prevent_force_push_master/</link><description>&lt;p&gt;やるな、と言われればそうなんだけど
+うっかりmasterに &lt;tt class="docutils literal"&gt;git push &lt;span class="pre"&gt;--force&lt;/span&gt;&lt;/tt&gt; とかやりそうになると背筋が凍る。
+gitにはpre-pushフックがあるみたいなのでここで禁止することにした。
+調べてみたら、 &lt;a class="reference external" href="https://gist.github.com/pixelhandler/5718585"&gt;良い感じ&lt;/a&gt; なフックがあったのでこれを使うことにした(ちょっといじった)&lt;/p&gt;
+&lt;p&gt;&lt;cite&gt;.git/hooks/pre-push&lt;/cite&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;protected_branches&lt;/span&gt;&lt;span class="o"&gt;=(&lt;/span&gt; production master &lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;for &lt;/span&gt;i in &lt;span class="s2"&gt;&amp;quot;${protected_branches[@]}&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;do&lt;/span&gt;
+
+&lt;span class="k"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;protected_branch&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$i&lt;/span&gt;
+
+    &lt;span class="nv"&gt;policy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;[Policy] Never push, force push or delete the &amp;#39;&lt;/span&gt;&lt;span class="nv"&gt;$protected_branch&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39; branch! (Prevented with pre-push hook.)&amp;#39;&lt;/span&gt;
+
+    &lt;span class="nv"&gt;current_branch&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;git symbolic-ref HEAD | sed -e &lt;span class="s1"&gt;&amp;#39;s,.*/\(.*\),\1,&amp;#39;&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+
+    &lt;span class="nv"&gt;push_command&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;ps -ocommand&lt;span class="o"&gt;=&lt;/span&gt; -p &lt;span class="nv"&gt;$PPID&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+
+    &lt;span class="nv"&gt;is_destructive&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;\-\-force|\-\-delete|\-f&amp;#39;&lt;/span&gt;
+
+    &lt;span class="nv"&gt;will_remove_protected_branch&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;:&amp;#39;&lt;/span&gt;&lt;span class="nv"&gt;$protected_branch&lt;/span&gt;
+
+    do_exit&lt;span class="o"&gt;(){&lt;/span&gt;
+      &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$policy&lt;/span&gt;
+      &lt;span class="nb"&gt;exit &lt;/span&gt;1
+    &lt;span class="o"&gt;}&lt;/span&gt;
+
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; &lt;span class="nv"&gt;$push_command&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;~ &lt;span class="nv"&gt;$is_destructive&lt;/span&gt; &lt;span class="o"&gt;]]&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$current_branch&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;$protected_branch&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;; &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="k"&gt;      &lt;/span&gt;do_exit
+    &lt;span class="k"&gt;fi&lt;/span&gt;
+
+&lt;span class="k"&gt;    if&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; &lt;span class="nv"&gt;$push_command&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;~ &lt;span class="nv"&gt;$is_destructive&lt;/span&gt; &lt;span class="o"&gt;]]&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; &lt;span class="nv"&gt;$push_command&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;~ &lt;span class="nv"&gt;$protected_branch&lt;/span&gt; &lt;span class="o"&gt;]]&lt;/span&gt;; &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="k"&gt;      &lt;/span&gt;do_exit
+    &lt;span class="k"&gt;fi&lt;/span&gt;
+
+&lt;span class="k"&gt;    if&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; &lt;span class="nv"&gt;$push_command&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;~ &lt;span class="nv"&gt;$will_remove_protected_branch&lt;/span&gt; &lt;span class="o"&gt;]]&lt;/span&gt;; &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="k"&gt;      &lt;/span&gt;do_exit
+    &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="k"&gt;done&lt;/span&gt;
+
+&lt;span class="nb"&gt;unset &lt;/span&gt;do_exit
+
+&lt;span class="nb"&gt;exit &lt;/span&gt;0
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;protected_branches&lt;/tt&gt; に列挙したブランチに&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;git push &lt;span class="pre"&gt;--force&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;git push &lt;span class="pre"&gt;-f&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;git push &lt;span class="pre"&gt;--delete&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;git push :$branch&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;なんてしようとした時に失敗させられる。&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Fri, 27 Dec 2013 00:00:00 +0900</pubDate><guid>tag:d.ktmtt.com,2013-12-27:-/2013/12/27/git_prevent_force_push_master/</guid><category>git</category></item><item><title>2013-12-26</title><link>http://d.ktmtt.com/-/2013/12/26/2013-12-26/</link><description>&lt;p&gt;今日はまぁ普通の日だった。&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://codebreak.com/invitation/hook/2b7f36c958a55b2d2fd7ef60b7c79193/"&gt;codebreak&lt;/a&gt; に登録したので試しに使ってみる。バックアップ先には良いかもしれない。BitBucketは結構重量級なイメージなのでこっちは軽めで良い。&lt;/p&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Thu, 26 Dec 2013 00:00:00 +0900</pubDate><guid>tag:d.ktmtt.com,2013-12-26:-/2013/12/26/2013-12-26/</guid></item><item><title>datetime.datetimeをYYYY-MM-DDTHH:MM:SS文字列にする</title><link>http://d.ktmtt.com/-/2013/12/25/datetimedatetimewoyyyy-mm-ddthhmmsswen-zi-lie-nisuru/</link><description>&lt;p&gt;何も考えないで作ると、高精度のdatetime.datetimeオブジェクトになっている
 余計な情報を削りたかった&lt;/p&gt;
@@ -345,48 +396,4 @@ mobileで音声ファイルを再生したい時はTi.Media.sound周りなどを
 
 &lt;span class="nx"&gt;player&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;play&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="c1"&gt;// スピーカーから音がなる&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Tue, 07 Feb 2012 00:49:00 +0900</pubDate><guid>tag:d.ktmtt.com,2012-02-07:-/2012/02/07/titanium-mobile-iphone/</guid><category>iOS</category><category>titanium</category></item><item><title>すごい遅れ馳せながらnode.jsはじめました</title><link>http://d.ktmtt.com/-/2012/02/03/node-js/</link><description>&lt;p&gt;マジで乗り遅れている。&lt;/p&gt;
-&lt;p&gt;おら&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;$&lt;/span&gt; brew install node
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Socket.IOとかいうライブラリを使うとWebSocketとかできるのか。
-ちなみにWebSocket的なのはGAEのChannel APIでやったことがある(気がする)。&lt;/p&gt;
-&lt;p&gt;Expressというのを入れるとルーティングもやってくれるみたい。
-パッケージ管理はnpmを使うらしい。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;$&lt;/span&gt; brew install npm
-&lt;span class="go"&gt;Error: No available formula for npm&lt;/span&gt;
-&lt;span class="go"&gt;npm can be installed thusly by following the instructions at&lt;/span&gt;
-&lt;span class="go"&gt;http://npmjs.org/&lt;/span&gt;
-
-&lt;span class="go"&gt;To do it in one line, use this command:&lt;/span&gt;
-&lt;span class="go"&gt; curl http://npmjs.org/install.sh | sh&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;ほう、そうか&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;$&lt;/span&gt; curl http://npmjs.org/install.sh | sh
-&lt;span class="go"&gt;-- 中略 --&lt;/span&gt;
-&lt;span class="go"&gt;All clean!&lt;/span&gt;
-&lt;span class="go"&gt;/usr/local/bin/npm -&amp;gt; /usr/local/lib/node_modules/npm/bin/npm-cli.js&lt;/span&gt;
-&lt;span class="go"&gt;npm@1.1.0-3 /usr/local/lib/node_modules/npm&lt;/span&gt;
-&lt;span class="go"&gt;It worked&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;おー/usr/localに入った。おｋおｋ。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;$&lt;/span&gt; npm install socket.io
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;これでSocket.IOも入った。&lt;/p&gt;
-&lt;p&gt;Socket.IOを使ったアプリケーションのひな形はSocket.IOのページに書いてある。&lt;/p&gt;
-&lt;p&gt;&lt;a class="reference external" href="http://socket.io/"&gt;http://socket.io/&lt;/a&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;io&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;socket.io&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;listen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;80&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="nx"&gt;io&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;sockets&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;on&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;connection&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;socket&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;socket&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;emit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;news&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;hello&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;world&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
-    &lt;span class="nx"&gt;socket&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;on&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;my other event&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="p"&gt;});&lt;/span&gt;
-&lt;span class="p"&gt;});&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;emitでイベントを起こして、onでイベントを受け取るらしい。&lt;/p&gt;
-&lt;p&gt;あと、Objective-Cのモジュール
-&lt;a class="reference external" href="http://code.google.com/p/unitt/wiki/UnittWebSocketClient"&gt;http://code.google.com/p/unitt/wiki/UnittWebSocketClient&lt;/a&gt;
-これ使ってみよう。
-データベースはmongoでいいかな。&lt;/p&gt;
-&lt;p&gt;これで簡単な投票システムでも作ってみる。できたら追記しよっと(いつやるかは決めてない)。&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Fri, 03 Feb 2012 15:12:00 +0900</pubDate><guid>tag:d.ktmtt.com,2012-02-03:-/2012/02/03/node-js/</guid><category>nodejs</category></item></channel></rss>
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Tue, 07 Feb 2012 00:49:00 +0900</pubDate><guid>tag:d.ktmtt.com,2012-02-07:-/2012/02/07/titanium-mobile-iphone/</guid><category>iOS</category><category>titanium</category></item></channel></rss>
