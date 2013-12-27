@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ktmtt</title><link>http://d.ktmtt.com/</link><description></description><atom:link href="http://d.ktmtt.com/feeds/atom.xml" rel="self"></atom:link><lastBuildDate>Fri, 27 Dec 2013 00:00:00 +0900</lastBuildDate><item><title>masterへのforce pushとdeleteを防ぐpre-pushフック</title><link>http://d.ktmtt.com/-/2013/12/27/git_prevent_force_push_master/</link><description>&lt;p&gt;やるな、と言われればそうなんだけど
 うっかりmasterに &lt;tt class="docutils literal"&gt;git push &lt;span class="pre"&gt;--force&lt;/span&gt;&lt;/tt&gt; とかやりそうになると背筋が凍る。
-gitにはpre-pushフックがあるみたいなのでここで禁止することにした。
-調べてみたら、 &lt;a class="reference external" href="https://gist.github.com/pixelhandler/5718585"&gt;良い感じ&lt;/a&gt; なフックがあったのでこれを使うことにした(ちょっといじった)&lt;/p&gt;
+リモートがgithubだとリモート側で拒否とかできないので、クライアント側の &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;pre-push&lt;/span&gt;&lt;/tt&gt; フックを使って禁止したい。
+調べてみたら、 &lt;a class="reference external" href="https://gist.github.com/pixelhandler/5718585"&gt;良い感じ&lt;/a&gt; なフックがあったので少しいじって使うことにした。&lt;/p&gt;
 &lt;p&gt;&lt;cite&gt;.git/hooks/pre-push&lt;/cite&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;protected_branches&lt;/span&gt;&lt;span class="o"&gt;=(&lt;/span&gt; production master &lt;span class="o"&gt;)&lt;/span&gt;
 &lt;span class="k"&gt;for &lt;/span&gt;i in &lt;span class="s2"&gt;&amp;quot;${protected_branches[@]}&amp;quot;&lt;/span&gt;
@@ -49,7 +49,7 @@ gitにはpre-pushフックがあるみたいなのでここで禁止すること
 &lt;li&gt;&lt;tt class="docutils literal"&gt;git push &lt;span class="pre"&gt;--delete&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
 &lt;li&gt;&lt;tt class="docutils literal"&gt;git push :$branch&lt;/tt&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;なんてしようとした時に失敗させられる。&lt;/p&gt;
+&lt;p&gt;なんてしようとした時に失敗してくれる。 便利だね。&lt;/p&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Fri, 27 Dec 2013 00:00:00 +0900</pubDate><guid>tag:d.ktmtt.com,2013-12-27:-/2013/12/27/git_prevent_force_push_master/</guid><category>git</category></item><item><title>2013-12-26</title><link>http://d.ktmtt.com/-/2013/12/26/2013-12-26/</link><description>&lt;p&gt;今日はまぁ普通の日だった。&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://codebreak.com/invitation/hook/2b7f36c958a55b2d2fd7ef60b7c79193/"&gt;codebreak&lt;/a&gt; に登録したので試しに使ってみる。バックアップ先には良いかもしれない。BitBucketは結構重量級なイメージなのでこっちは軽めで良い。&lt;/p&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Thu, 26 Dec 2013 00:00:00 +0900</pubDate><guid>tag:d.ktmtt.com,2013-12-26:-/2013/12/26/2013-12-26/</guid></item><item><title>datetime.datetimeをYYYY-MM-DDTHH:MM:SS文字列にする</title><link>http://d.ktmtt.com/-/2013/12/25/datetimedatetimewoyyyy-mm-ddthhmmsswen-zi-lie-nisuru/</link><description>&lt;p&gt;何も考えないで作ると、高精度のdatetime.datetimeオブジェクトになっている
