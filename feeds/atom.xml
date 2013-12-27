@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ktmtt</title><link>http://d.ktmtt.com/</link><description></description><atom:link href="http://d.ktmtt.com/feeds/atom.xml" rel="self"></atom:link><lastBuildDate>Fri, 27 Dec 2013 00:00:00 +0900</lastBuildDate><item><title>masterへのforce pushとdeleteを防ぐpre-pushフック</title><link>http://d.ktmtt.com/-/2013/12/27/git_prevent_force_push_master/</link><description>&lt;p&gt;やるな、と言われればそうなんだけど
 うっかりmasterに &lt;tt class="docutils literal"&gt;git push &lt;span class="pre"&gt;--force&lt;/span&gt;&lt;/tt&gt; とかやりそうになると背筋が凍る。
 リモートがgithubだとリモート側で拒否とかできないので、クライアント側の &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;pre-push&lt;/span&gt;&lt;/tt&gt; フックを使って禁止したい。
-調べてみたら、 &lt;a class="reference external" href="https://gist.github.com/pixelhandler/5718585"&gt;良い感じ&lt;/a&gt; なフックがあったので少しいじって使うことにした。&lt;/p&gt;
+調べてみると &lt;a class="reference external" href="https://gist.github.com/pixelhandler/5718585"&gt;良い感じ&lt;/a&gt; なフックがあったので少しいじって使うことにした。&lt;/p&gt;
 &lt;p&gt;&lt;cite&gt;.git/hooks/pre-push&lt;/cite&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;protected_branches&lt;/span&gt;&lt;span class="o"&gt;=(&lt;/span&gt; production master &lt;span class="o"&gt;)&lt;/span&gt;
 &lt;span class="k"&gt;for &lt;/span&gt;i in &lt;span class="s2"&gt;&amp;quot;${protected_branches[@]}&amp;quot;&lt;/span&gt;
