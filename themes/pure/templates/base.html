@@ -50,6 +50,8 @@
     {% block head %}
         <title>{% block title %}{{ SITENAME }} // {{ TAGLINE }}{% endblock title %}</title>
     {% endblock head %}
+
+    {% include 'analytics.html' %}
 </head>
 
 <body>
@@ -144,7 +146,5 @@
             })
         });
     </script>
-
-    {% include 'analytics.html' %}
 </body>
 </html>
