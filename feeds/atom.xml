@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ktmtt</title><link>http://d.ktmtt.com/</link><description></description><atom:link href="http://d.ktmtt.com/feeds/atom.xml" rel="self"></atom:link><lastBuildDate>Tue, 07 Jan 2014 00:00:00 +0900</lastBuildDate><item><title>Docker</title><link>http://d.ktmtt.com/-/2014/01/07/docker/</link><description>&lt;p&gt;結構好き。実行時のコンテキストを呼んでImmutableなアプリが動く。
-DockerでアプリやDBのコンテナを別々に動かして、環境変数経由でそれぞれを繋ぐと
-アプリ本体と依存している外部の設定(DBの接続先とか)が分離できるのでおしゃれ。&lt;/p&gt;
-&lt;p&gt;気づいたらなんでもかんでもこれでやろうとしてて、自分の遊びプロジェクトがいつまでたっても完成しない。。&lt;/p&gt;
+DockerでアプリやDBのコンテナを別々に動かして環境変数経由でそれぞれを繋ぐと&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;アプリ本体&lt;/li&gt;
+&lt;li&gt;外部に依存している部分の設定(e.g. DBの接続先)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;が分離できるのでおしゃれ。
+気づいたらなんでもかんでもこれでやろうとしてて、自分の遊びプロジェクトがいつまでたっても完成しない。&lt;/p&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Tue, 07 Jan 2014 00:00:00 +0900</pubDate><guid>tag:d.ktmtt.com,2014-01-07:-/2014/01/07/docker/</guid></item><item><title>masterへのforce pushとdeleteを防ぐpre-pushフック</title><link>http://d.ktmtt.com/-/2013/12/27/git_prevent_force_push_master/</link><description>&lt;p&gt;やるな、と言われればそうなんだけど
 うっかりmasterに &lt;tt class="docutils literal"&gt;git push &lt;span class="pre"&gt;--force&lt;/span&gt;&lt;/tt&gt; とかやりそうになると背筋が凍る。
 リモートがgithubだとリモート側で拒否とかできないので、クライアント側の &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;pre-push&lt;/span&gt;&lt;/tt&gt; フックを使って禁止したい。
