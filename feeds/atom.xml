@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ktmtt</title><link>http://d.ktmtt.com/</link><description></description><atom:link href="http://d.ktmtt.com/feeds/atom.xml" rel="self"></atom:link><lastBuildDate>Fri, 27 Dec 2013 00:00:00 +0900</lastBuildDate><item><title>masterへのforce pushとdeleteを防ぐpre-pushフック</title><link>http://d.ktmtt.com/-/2013/12/27/git_prevent_force_push_master/</link><description>&lt;p&gt;やるな、と言われればそうなんだけど
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ktmtt</title><link>http://d.ktmtt.com/</link><description></description><atom:link href="http://d.ktmtt.com/feeds/atom.xml" rel="self"></atom:link><lastBuildDate>Tue, 07 Jan 2014 00:00:00 +0900</lastBuildDate><item><title>Docker</title><link>http://d.ktmtt.com/-/2014/01/07/docker/</link><description>&lt;p&gt;結構好き。実行時のコンテキストを呼んでImmutableなアプリが動く。
+DockerでアプリやDBのコンテナを別々に動かして、環境変数経由でそれぞれを繋ぐと
+アプリ本体と依存している外部の設定(DBの接続先とか)が分離できるのでおしゃれ。&lt;/p&gt;
+&lt;p&gt;気づいたらなんでもかんでもこれでやろうとしてて、自分の遊びプロジェクトがいつまでたっても完成しない。。&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Tue, 07 Jan 2014 00:00:00 +0900</pubDate><guid>tag:d.ktmtt.com,2014-01-07:-/2014/01/07/docker/</guid></item><item><title>masterへのforce pushとdeleteを防ぐpre-pushフック</title><link>http://d.ktmtt.com/-/2013/12/27/git_prevent_force_push_master/</link><description>&lt;p&gt;やるな、と言われればそうなんだけど
 うっかりmasterに &lt;tt class="docutils literal"&gt;git push &lt;span class="pre"&gt;--force&lt;/span&gt;&lt;/tt&gt; とかやりそうになると背筋が凍る。
 リモートがgithubだとリモート側で拒否とかできないので、クライアント側の &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;pre-push&lt;/span&gt;&lt;/tt&gt; フックを使って禁止したい。
 調べてみると &lt;a class="reference external" href="https://gist.github.com/pixelhandler/5718585"&gt;良い感じ&lt;/a&gt; なフックがあったので少しいじって使うことにした。&lt;/p&gt;
@@ -377,23 +381,4 @@ Desktopは沈黙してしまう。コマッタ。&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;若干無駄にネットワークを経由するせいか遅い気がしますがわざわざ繋ぐ必要がないのは感動です。&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Tue, 07 Feb 2012 01:13:00 +0900</pubDate><guid>tag:d.ktmtt.com,2012-02-07:-/2012/02/07/xcode-lan/</guid><category>iOS</category><category>Xcode</category></item><item><title>Titanium mobileでiPhoneの電話用のスピーカー(レシーバー)から音を鳴らす</title><link>http://d.ktmtt.com/-/2012/02/07/titanium-mobile-iphone/</link><description>&lt;p&gt;Titanium
-mobileで音声ファイルを再生したい時はTi.Media.sound周りなどを使いますが、大きな音が出るスピーカーではなく電話の時に使う小さいスピーカー(本当はレシーバーというそうです)から音を出したいときってありますよね。きっと。探しみたら簡単にできる様なのでここに書いておきます。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;player&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;Ti&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Media&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;createSound&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;
- &lt;span class="nx"&gt;url&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;sound.caf&amp;#39;&lt;/span&gt;
- &lt;span class="p"&gt;});&lt;/span&gt;
-
-&lt;span class="nx"&gt;player&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;play&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="c1"&gt;// スピーカーから音がなる&lt;/span&gt;
-
-&lt;span class="c1"&gt;// 現在のオーディオセッションのルートを変える&lt;/span&gt;
-&lt;span class="nx"&gt;Ti&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Media&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setAudioSessionMode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;Ti&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Media&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;AUDIO_SESSION_MODE_PLAY_AND_RECORD&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-
-&lt;span class="nx"&gt;player&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;play&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="c1"&gt;// レシーバーから音がなる&lt;/span&gt;
-
-&lt;span class="c1"&gt;// 元のルートに変える&lt;/span&gt;
-
-&lt;span class="nx"&gt;Ti&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Media&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setAudioSessionMode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;Titanium&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Media&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;AUDIO_SESSION_MODE_PLAYBACK&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-
-&lt;span class="nx"&gt;player&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;play&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="c1"&gt;// スピーカーから音がなる&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Tue, 07 Feb 2012 00:49:00 +0900</pubDate><guid>tag:d.ktmtt.com,2012-02-07:-/2012/02/07/titanium-mobile-iphone/</guid><category>iOS</category><category>titanium</category></item></channel></rss>
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Tue, 07 Feb 2012 01:13:00 +0900</pubDate><guid>tag:d.ktmtt.com,2012-02-07:-/2012/02/07/xcode-lan/</guid><category>iOS</category><category>Xcode</category></item></channel></rss>
