@@ -22,7 +22,7 @@ iOS7のSafariからWebspeech APIのSynthesis API(text to speech)をサポート�
 SpeechSynthesisUtteranceのlangが空だった場合は端末の言語に合せてくれる模様。
 
 テストページを作りました。
-`iOS7 webspeech test(iOS7で見て下さい) <|filename|files/ios7_webspeech_test.html>`_
+`iOS7 webspeech test(iOS7で見て下さい) <files/ios7_webspeech_test.html>`_
 
 注意が必要なのは、ボタンを押すなどのユーザーによる操作の後にしか動作しない点
 なかなか面白いAPIですね。口を動かすのが面倒な時に使ってみてはいかがでしょうか。
