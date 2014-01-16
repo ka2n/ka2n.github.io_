@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ktmtt</title><link>http://d.ktmtt.com/</link><description></description><atom:link href="http://d.ktmtt.com/feeds/atom.xml" rel="self"></atom:link><lastBuildDate>Tue, 07 Jan 2014 00:00:00 +0900</lastBuildDate><item><title>Docker</title><link>http://d.ktmtt.com/-/2014/01/07/docker/</link><description>&lt;p&gt;結構好き。実行時のコンテキストを呼んでImmutableなアプリが動く。
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ktmtt</title><link>http://d.ktmtt.com/</link><description></description><atom:link href="http://d.ktmtt.com/feeds/atom.xml" rel="self"></atom:link><lastBuildDate>Fri, 17 Jan 2014 00:00:00 +0900</lastBuildDate><item><title>最近買ったもの</title><link>http://d.ktmtt.com/-/2014/01/17/bought-gopro-qc15/</link><description>&lt;p&gt;&lt;img alt="okaiage_img" src="/images/okaiage_amazon.png" /&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;GoProのいちばんいいやつ&lt;/li&gt;
+&lt;li&gt;64GBのMicroSD(SDXC) SanDisk Ultra&lt;/li&gt;
+&lt;li&gt;BOSEのQC15&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;6台必要になったのでそのうち1台を買った。
+6台あれば &lt;a class="reference external" href="http://www.360heros.com/"&gt;360Heros&lt;/a&gt; できる。
+SanDiskのExtreme Proを持っていたけどGoProはmicroSDしか対応していなかった。
+それとは関係無いんだけど、前々から欲しかったQC15を買った。
+散々悩んだのだけどやっぱりほしい。&lt;/p&gt;
+&lt;iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=2253042-22&amp;o=9&amp;p=8&amp;l=as1&amp;asins=B00GOKOT0C&amp;ref=qf_sp_asin_til&amp;fc1=000000&amp;IS2=1&amp;lt1=_top&amp;m=amazon&amp;lc1=0000FF&amp;bc1=FFFFFF&amp;bg1=FFFFFF&amp;f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"&gt;&lt;/iframe&gt;&lt;iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=2253042-22&amp;o=9&amp;p=8&amp;l=as1&amp;asins=B0081EAK34&amp;ref=tf_til&amp;fc1=000000&amp;IS2=1&amp;lt1=_top&amp;m=amazon&amp;lc1=0000FF&amp;bc1=FFFFFF&amp;bg1=FFFFFF&amp;f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"&gt;&lt;/iframe&gt;&lt;iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=2253042-22&amp;o=9&amp;p=8&amp;l=as1&amp;asins=B0056Z73FY&amp;ref=tf_til&amp;fc1=000000&amp;IS2=1&amp;lt1=_top&amp;m=amazon&amp;lc1=0000FF&amp;bc1=FFFFFF&amp;bg1=FFFFFF&amp;f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"&gt;&lt;/iframe&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Fri, 17 Jan 2014 00:00:00 +0900</pubDate><guid>tag:d.ktmtt.com,2014-01-17:-/2014/01/17/bought-gopro-qc15/</guid></item><item><title>Docker</title><link>http://d.ktmtt.com/-/2014/01/07/docker/</link><description>&lt;p&gt;結構好き。実行時のコンテキストを呼んでImmutableなアプリが動く。
 DockerでアプリやDBのコンテナを別々に動かして環境変数経由でそれぞれを繋ぐと&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;アプリ本体&lt;/li&gt;
@@ -94,7 +105,7 @@ Markdownの方が直感的だなぁと思う。とは言うもののこっちは
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;SpeechSynthesisUtteranceのlangが空だった場合は端末の言語に合せてくれる模様。&lt;/p&gt;
 &lt;p&gt;テストページを作りました。
-&lt;a class="reference external" href="http://d.ktmtt.com/content/files/ios7_webspeech_test.html"&gt;iOS7 webspeech test(iOS7で見て下さい)&lt;/a&gt;&lt;/p&gt;
+&lt;a class="reference external" href="|filename|files/ios7_webspeech_test.html"&gt;iOS7 webspeech test(iOS7で見て下さい)&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;注意が必要なのは、ボタンを押すなどのユーザーによる操作の後にしか動作しない点
 なかなか面白いAPIですね。口を動かすのが面倒な時に使ってみてはいかがでしょうか。&lt;/p&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Fri, 20 Sep 2013 07:50:00 +0900</pubDate><guid>tag:d.ktmtt.com,2013-09-20:-/2013/09/20/ios7_webspeech_test/</guid><category>iOS</category><category>HTML</category></item><item><title>Named routing with regexp in FuelPHP</title><link>http://d.ktmtt.com/-/2013/06/25/named-routing-with-regexp-in-fuelphp/</link><description>&lt;p&gt;FuelPHPでルーティングルールを設定する時, (:segment)や(:num),(:alpha)等を使えます。
@@ -371,18 +382,4 @@ Desktopは沈黙してしまう。コマッタ。&lt;/p&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Sat, 21 Jul 2012 06:28:00 +0900</pubDate><guid>tag:d.ktmtt.com,2012-07-21:-/2012/07/21/kobo-touch/</guid><category>kobo</category></item><item><title>GuradでJSXでの開発を快適に</title><link>http://d.ktmtt.com/-/2012/06/03/gurad-jsx/</link><description>&lt;p&gt;&lt;a class="reference external" href="https://gist.github.com/2863673"&gt;https://gist.github.com/2863673&lt;/a&gt;
 おもしろそうな上に使えそうなJSX&lt;/p&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Sun, 03 Jun 2012 23:21:00 +0900</pubDate><guid>tag:d.ktmtt.com,2012-06-03:-/2012/06/03/gurad-jsx/</guid><category>javascript</category><category>JSX</category></item><item><title>Deuxième article</title><link>http://d.ktmtt.com/second-article-fr.html</link><description>&lt;p&gt;Ceci est un article, en français.&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Wed, 29 Feb 2012 00:00:00 +0900</pubDate><guid>tag:d.ktmtt.com,2012-02-29:second-article-fr.html</guid><category>foo</category><category>bar</category><category>baz</category></item><item><title>Xcodeを使いiOSアプリをWifi経由で実機デバッグ</title><link>http://d.ktmtt.com/-/2012/02/07/xcode-lan/</link><description>&lt;p&gt;追記: XCode 4.3でこの機能は削除されてしまったようです。残念。。&lt;/p&gt;
-&lt;div class="line-block"&gt;
-&lt;div class="line"&gt;できるってご存知でしたか？&lt;/div&gt;
-&lt;div class="line-block"&gt;
-&lt;div class="line"&gt;僕は知りませんでした。&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="line-block"&gt;
-&lt;div class="line"&gt;メニューの Xcode &amp;gt; Preferences (⌘+,)を開いてここにチェックを入れる！&lt;/div&gt;
-&lt;div class="line-block"&gt;
-&lt;div class="line"&gt;&lt;a class="reference external" href="http://ktmtt.com/diary/wp-content/uploads/xcodewifidebug1.jpg"&gt;&lt;img alt="image0" src="http://ktmtt.com/diary/wp-content/uploads/xcodewifidebug1.jpg" /&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;若干無駄にネットワークを経由するせいか遅い気がしますがわざわざ繋ぐ必要がないのは感動です。&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Tue, 07 Feb 2012 01:13:00 +0900</pubDate><guid>tag:d.ktmtt.com,2012-02-07:-/2012/02/07/xcode-lan/</guid><category>iOS</category><category>Xcode</category></item></channel></rss>
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Wed, 29 Feb 2012 00:00:00 +0900</pubDate><guid>tag:d.ktmtt.com,2012-02-29:second-article-fr.html</guid><category>foo</category><category>bar</category><category>baz</category></item></channel></rss>
