@@ -34,15 +34,15 @@ ARTICLE_SAVE_AS = '-/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 
 STATIC_PATHS = [
-    "content/images",
-    "content/files",
-    "content/extra/CNAME",
-    "content/extra/favicon.ico"
+    "images",
+    "files",
+    "extra/CNAME",
+    "extra/favicon.ico"
 ]
 
 EXTRA_PATH_METADATA = {
-    "content/extra/CNAME": {'path': 'CNAME'},
-    "content/extra/favicon.ico": {'path': 'favicon.ico'}
+    "extra/CNAME": {'path': 'CNAME'},
+    "extra/favicon.ico": {'path': 'favicon.ico'}
 }
 
 READERS = {

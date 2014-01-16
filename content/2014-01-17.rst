@@ -1,0 +1,34 @@
+最近買ったもの
+=========================================
+:date: 2014-01-17
+:author: ka2n
+:slug: bought-gopro-qc15
+
+
+|okaiage_img|
+
+- GoProのいちばんいいやつ
+- 64GBのMicroSD(SDXC) SanDisk Ultra
+- BOSEのQC15
+
+6台必要になったのでそのうち1台を買った。
+6台あれば 360Heros_ できる。
+SanDiskのExtreme Proを持っていたけどGoProはmicroSDしか対応していなかった。
+それとは関係無いんだけど、前々から欲しかったQC15を買った。
+散々悩んだのだけどやっぱりほしい。
+
+.. raw:: html
+
+    <iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=2253042-22&o=9&p=8&l=as1&asins=B00GOKOT0C&ref=qf_sp_asin_til&fc1=000000&IS2=1&lt1=_top&m=amazon&lc1=0000FF&bc1=FFFFFF&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+
+
+.. raw:: html
+
+    <iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=2253042-22&o=9&p=8&l=as1&asins=B0081EAK34&ref=tf_til&fc1=000000&IS2=1&lt1=_top&m=amazon&lc1=0000FF&bc1=FFFFFF&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+
+.. raw:: html
+
+    <iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=2253042-22&o=9&p=8&l=as1&asins=B0056Z73FY&ref=tf_til&fc1=000000&IS2=1&lt1=_top&m=amazon&lc1=0000FF&bc1=FFFFFF&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+
+.. _360Heros: http://www.360heros.com/
+.. |okaiage_img| image:: /images/okaiage_amazon.png
