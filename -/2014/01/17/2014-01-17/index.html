@@ -19,13 +19,13 @@
 
     <!-- Open Graph tags -->
             <meta property="og:type" content="article"/>
-            <meta property="og:title" content="Twenty Tenの子テーマのカスタムヘッダーを無効にする"/>
-            <meta property="og:url" content="http://d.ktmtt.com/-/2011/07/10/twenty-ten/"/>
-            <meta property="og:description" content="WordPressのデフォルトテーマであるTwenty Ten。新しいテーマを作るときはこいつを継承して"子テーマ"として作成するのがヨサゲなようです。 Twenty Tenにはヘッダーに大きなアイキャッチ画像があります。 カスタムヘッダー機能を使えばテーマの編集なしにWordPressの管理画面から変更する事ができます。 ただヘッダーにアイキャッチ画像が必要ない場合もあるので、こんな感じで実際の出力から消すことができます。 (http://tortoise.workarea.jp/?p=158) こんな具合で消すわけですが、管理画面には依然としてメニューとその先の画面が残ります。 気持ちが悪いので消します。 WordPress3.1からremove_custom_image_headerという関数が追加されているようなのでこれを使用します。 http://codex.wordpress.org/Custom_Headers 参考までにTwenty Tenのfunctions.phpでカスタムヘッダー機能を追加している部分 <?php // ...中略... // Add a way for the custom header to be styled in the admin panel that controls // custom ..."/>
+            <meta property="og:title" content="2014-01-17"/>
+            <meta property="og:url" content="http://d.ktmtt.com/-/2014/01/17/2014-01-17/"/>
+            <meta property="og:description" content="GoPro$BFO$$$?!#$H$j$"$($:3+$1$K$/$$!"3+$1$K$/$$!"H"GT$l$?!#(B $B%Q%C%1!<%8$N%^%&%s%?!<$+$i30$;$J$$$+$iIaDL$K%T%s$rH4$$$F30$7$?!#KI?e$N%+%P!<30$;$J$$!#(B GoPro = $B3+$1$K$/$$(B"/>
 
         <link href="http://d.ktmtt.com/feeds/atom.xml" type="application/atom+xml" rel="alternate" title="ktmtt RSS Feed" />
 
-        <title>Twenty Tenの子テーマのカスタムヘッダーを無効にする // ktmtt // </title>
+        <title>2014-01-17 // ktmtt // </title>
 
 <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -118,73 +118,18 @@
         <div class="article-content margin-blue">
             <div class="article-content-header pure-g">
                 <div class="pure-u-1">
-                    <h1 class="article-content-title">Twenty Tenの子テーマのカスタムヘッダーを無効にする</h1>
+                    <h1 class="article-content-title">2014-01-17</h1>
                     <p class="article-content-subtitle">
-                        by <a href="http://d.ktmtt.com/author/ka2n.html">ka2n</a> on <span>2011-07-10</span>
-                        // Posted in <a href="http://d.ktmtt.com/category/general.html">general</a>
-                            // under                                 <a class="post-category post-category-design" href="http://d.ktmtt.com/tag/tips.html">Tips</a>
-                                <a class="post-category post-category-design" href="http://d.ktmtt.com/tag/wordpress.html">wordpress</a>
+                        by <a href="http://d.ktmtt.com/author/ka2n.html">ka2n</a> on <span>2014-01-17</span>
+                        // Posted in <a href="http://d.ktmtt.com/category/content.html">content</a>
                     </p>
                 </div>
             </div>
             <div class="article-content-body">
                 <p>
-                    <p>WordPressのデフォルトテーマであるTwenty
-Ten。新しいテーマを作るときはこいつを継承して&quot;子テーマ&quot;として作成するのがヨサゲなようです。</p>
-<p>Twenty Tenにはヘッダーに大きなアイキャッチ画像があります。
-カスタムヘッダー機能を使えばテーマの編集なしにWordPressの管理画面から変更する事ができます。</p>
-<p><a class="reference external" href="http://ktmtt.com/diary/wp-content/uploads/tt.png"><img alt="Twenty Ten" src="http://ktmtt.com/diary/wp-content/uploads/tt-300x172.png" /></a></p>
-<p>ただヘッダーにアイキャッチ画像が必要ない場合もあるので、こんな感じで実際の出力から消すことができます。
-(<a class="reference external" href="http://tortoise.workarea.jp/?p=158">http://tortoise.workarea.jp/?p=158</a>)</p>
-<p><a class="reference external" href="http://ktmtt.com/diary/wp-content/uploads/tt2.png"><img alt="image1" src="http://ktmtt.com/diary/wp-content/uploads/tt2-300x170.png" /></a></p>
-<p>こんな具合で消すわけですが、管理画面には依然としてメニューとその先の画面が残ります。
-<a class="reference external" href="http://ktmtt.com/diary/wp-content/uploads/ch.png"><img alt="image2" src="http://ktmtt.com/diary/wp-content/uploads/ch-300x134.png" /></a>
-気持ちが悪いので消します。</p>
-<p>WordPress3.1から<strong>remove_custom_image_header</strong>という関数が追加されているようなのでこれを使用します。</p>
-<p><a class="reference external" href="http://codex.wordpress.org/Custom_Headers">http://codex.wordpress.org/Custom_Headers</a></p>
-<p>参考までにTwenty Tenのfunctions.phpでカスタムヘッダー機能を追加している部分</p>
-<div class="highlight"><pre><span class="cp">&lt;?php</span>
-<span class="c1">// ...中略...</span>
-<span class="c1">// Add a way for the custom header to be styled in the admin panel that controls</span>
-<span class="c1">// custom headers. See twentyten\_admin\_header\_style(), below.</span>
-<span class="nx">add_custom_image_header</span><span class="p">(</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;twentyten_admin_header_style&#39;</span> <span class="p">);</span>
-</pre></div>
-<p>こいつを子テーマのfunctions.phpで無効にしてやりましょう。</p>
-<div class="highlight"><pre><span class="cp">&lt;?php</span>
-<span class="c1">// ...中略...</span>
-
-<span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="nb">function_exists</span><span class="p">(</span> <span class="s1">&#39;child_theme_init&#39;</span> <span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
-    <span class="k">function</span> <span class="nf">child_theme_init</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nx">remove_custom_image_header</span><span class="p">();</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-<span class="nx">add_action</span><span class="p">(</span><span class="s1">&#39;init&#39;</span><span class="p">,</span> <span class="s1">&#39;child_theme_init&#39;</span><span class="p">);</span>
-</pre></div>
-<p>こんな感じです。
-initに新たに定義したchild_theme_init関数をフックして呼び出される様にします。
-子テーマから親テーマの機能を変更する際にはafter_setup_themeにフックする場合が多いみたいですが、こっちだと上手くいきませんでした。</p>
-<p>テーマの設定は</p>
-<blockquote>
-子テーマのfunctions.php -&gt; 親テーマのfunctions.php -&gt;
-after_setup_theme -&gt; init</blockquote>
-<p>の順番で呼ばれます。今回無効にしたかったadd_custom_image_headerはTwenty
-Tenのfunctions.phpの中で定義されている<strong>twentyten_setup</strong>という関数の中に書かれています。</p>
-<p>そして、以下のようにフックされています。</p>
-<div class="highlight"><pre><span class="x">/** Tell WordPress to run twentyten_setup() when the &#39;after_setup_theme&#39; hook is run. */</span>
-<span class="x">add_action( &#39;after_setup_theme&#39;, &#39;twentyten_setup&#39; );</span>
-</pre></div>
-<p>after_setup_themeにフックされています。</p>
-<blockquote>
-子テーマのfunctions.php -&gt; 親テーマのfunctions.php</blockquote>
-<p>という順番で読み込まれますので、実行順は..</p>
-<blockquote>
-子テーマのafter_setup_themeへフックされた関数 -&gt;
-親テーマのafter_setup_themeへフックされた関数</blockquote>
-<p>となり、子テーマのafter_setup_themeでremove_custom_image_headerを呼びだそうが、
-その後にadd_custom_image_headerが設定されてしまうので、カスタムヘッダーを無効にすることができませんでした。
-そこで更に後に呼び出されるinitにフックしたというわけです。</p>
-<p><a class="reference external" href="http://ktmtt.com/diary/wp-content/uploads/ch21.png"><img alt="image3" src="http://ktmtt.com/diary/wp-content/uploads/ch21.png" /></a></p>
-<p>これで管理画面からも消えました。</p>
+                    <p>GoPro$BFO$$$?!#$H$j$&quot;$($:3+$1$K$/$$!&quot;3+$1$K$/$$!&quot;H&quot;GT$l$?!#(B
+$B%Q%C%1!&lt;%8$N%^%&amp;%s%?!&lt;$+$i30$;$J$$$+$iIaDL$K%T%s$rH4$$$F30$7$?!#KI?e$N%+%P!&lt;30$;$J$$!#(B</p>
+<p>GoPro = $B3+$1$K$/$$(B</p>
 
                 </p>
  
