@@ -1,0 +1,13 @@
+2014-01-18
+=========================================
+:date: 2014-01-18
+:author: ka2n
+:tags: GoPro
+
+
+|gopro|
+
+SDカードも届いたのでGoPro空けた。
+タイムラプスやろうと思う。
+
+.. |gopro| image:: /files/images/gopro.jpg
