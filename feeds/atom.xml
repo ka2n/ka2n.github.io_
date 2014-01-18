@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ktmtt</title><link>http://d.ktmtt.com/</link><description></description><atom:link href="http://d.ktmtt.com/feeds/atom.xml" rel="self"></atom:link><lastBuildDate>Fri, 17 Jan 2014 00:00:00 +0900</lastBuildDate><item><title>2014-01-17</title><link>http://d.ktmtt.com/-/2014/01/17/2014-01-17/</link><description>&lt;p&gt;GoPro届いた。とりあえず開けにくい、開けにくい、箱敗れた。
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ktmtt</title><link>http://d.ktmtt.com/</link><description></description><atom:link href="http://d.ktmtt.com/feeds/atom.xml" rel="self"></atom:link><lastBuildDate>Sat, 18 Jan 2014 00:00:00 +0900</lastBuildDate><item><title>2014-01-18</title><link>http://d.ktmtt.com/-/2014/01/18/2014-01-18/</link><description>&lt;p&gt;&lt;img alt="gopro" src="/files/images/gopro.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;SDカードも届いたのでGoPro空けた。
+タイムラプスやろうと思う。&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Sat, 18 Jan 2014 00:00:00 +0900</pubDate><guid>tag:d.ktmtt.com,2014-01-18:-/2014/01/18/2014-01-18/</guid><category>GoPro</category></item><item><title>2014-01-17</title><link>http://d.ktmtt.com/-/2014/01/17/2014-01-17/</link><description>&lt;p&gt;GoPro届いた。とりあえず開けにくい、開けにくい、箱敗れた。
 パッケージのマウンターから外せないから普通にピンを抜いて外した。防水のカバー外せない。&lt;/p&gt;
 &lt;p&gt;GoPro = 開けにくい&lt;/p&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Fri, 17 Jan 2014 00:00:00 +0900</pubDate><guid>tag:d.ktmtt.com,2014-01-17:-/2014/01/17/2014-01-17/</guid></item><item><title>最近買ったもの</title><link>http://d.ktmtt.com/-/2014/01/17/bought-gopro-qc15/</link><description>&lt;p&gt;&lt;img alt="okaiage_img" src="/files/images/okaiage_amazon.png" /&gt;&lt;/p&gt;
@@ -382,6 +385,4 @@ Desktopは沈黙してしまう。コマッタ。&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;さあて、元に戻ったので、皆さん人柱頑張りましょう。&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Sat, 21 Jul 2012 06:28:00 +0900</pubDate><guid>tag:d.ktmtt.com,2012-07-21:-/2012/07/21/kobo-touch/</guid><category>kobo</category></item><item><title>GuradでJSXでの開発を快適に</title><link>http://d.ktmtt.com/-/2012/06/03/gurad-jsx/</link><description>&lt;p&gt;&lt;a class="reference external" href="https://gist.github.com/2863673"&gt;https://gist.github.com/2863673&lt;/a&gt;
-おもしろそうな上に使えそうなJSX&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Sun, 03 Jun 2012 23:21:00 +0900</pubDate><guid>tag:d.ktmtt.com,2012-06-03:-/2012/06/03/gurad-jsx/</guid><category>javascript</category><category>JSX</category></item></channel></rss>
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Sat, 21 Jul 2012 06:28:00 +0900</pubDate><guid>tag:d.ktmtt.com,2012-07-21:-/2012/07/21/kobo-touch/</guid><category>kobo</category></item></channel></rss>
