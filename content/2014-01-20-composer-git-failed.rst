@@ -3,6 +3,8 @@ composerで'Failed to execute git checkout'が出るときの対処法
 :date: 2014-01-20
 :author: ka2n
 :slug: composer-failed-to-execute-git-checkout-error
+:category: dev
+:tags: php, composer
 
 composerの依存ライブラリでgitのレポジトリからチェックアウトするものがあったのだけど(phpunit)
 たまたまその時上手くチェックアウトできない状態だったため下のようなエラーが出でしまった。
