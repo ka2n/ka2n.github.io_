@@ -1,9 +1,11 @@
-composerで'Failed to execute git checkout'
-==========================================
+composerで'Failed to execute git checkout'が出るときの対処法
+==============================================================
 :date: 2014-01-20
 :author: ka2n
-:status: draft
+:slug: composer-failed-to-execute-git-checkout-error
 
+composerの依存ライブラリでgitのレポジトリからチェックアウトするものがあったのだけど(phpunit)
+たまたまその時上手くチェックアウトできない状態だったため下のようなエラーが出でしまった。
 
 .. code-block:: bash
 
@@ -15,6 +17,13 @@ composerで'Failed to execute git checkout'
 
       error: You have local changes to 'phpunit'; cannot switch branches.
 
+
+対処
+
 .. code-block:: bash
 
     php composer.phar install --prefer-dist
+
+
+``--prefer-dist`` はソースコードをチェックアウトしてくるのじゃなくて、アーカイブから取得してくれる。githubだったらタグがついてるやつ。
+普段からつけた方が良いな。
