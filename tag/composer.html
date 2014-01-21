@@ -25,7 +25,7 @@
 
         <link href="http://d.ktmtt.com/feeds/atom.xml" type="application/atom+xml" rel="alternate" title="ktmtt RSS Feed" />
 
-        <title>docker tag // ktmtt // </title>
+        <title>composer tag // ktmtt // </title>
 
 <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -70,7 +70,7 @@
                             <li><a href="http://d.ktmtt.com/tag/coolbook.html"><span class="cat-label-blue"></span>CoolBook</a></li>
                             <li><a href="http://d.ktmtt.com/tag/python.html"><span class="cat-label-blue"></span>python</a></li>
                             <li><a href="http://d.ktmtt.com/tag/android.html"><span class="cat-label-blue"></span>Android</a></li>
-                            <li><a href="http://d.ktmtt.com/tag/docker.html"><span class="cat-label-yellow"<span class="cat-label-blue"></span>docker</a></li>
+                            <li><a href="http://d.ktmtt.com/tag/docker.html"><span class="cat-label-blue"></span>docker</a></li>
                             <li><a href="http://d.ktmtt.com/tag/gadget.html"><span class="cat-label-blue"></span>gadget</a></li>
                             <li><a href="http://d.ktmtt.com/tag/foobar.html"><span class="cat-label-blue"></span>foobar</a></li>
                             <li><a href="http://d.ktmtt.com/tag/kobo.html"><span class="cat-label-blue"></span>kobo</a></li>
@@ -80,7 +80,7 @@
                             <li><a href="http://d.ktmtt.com/tag/nodejs.html"><span class="cat-label-blue"></span>nodejs</a></li>
                             <li><a href="http://d.ktmtt.com/tag/gopro.html"><span class="cat-label-blue"></span>GoPro</a></li>
                             <li><a href="http://d.ktmtt.com/tag/html.html"><span class="cat-label-blue"></span>HTML</a></li>
-                            <li><a href="http://d.ktmtt.com/tag/composer.html"><span class="cat-label-blue"></span>composer</a></li>
+                            <li><a href="http://d.ktmtt.com/tag/composer.html"><span class="cat-label-yellow"<span class="cat-label-blue"></span>composer</a></li>
                             <li><a href="http://d.ktmtt.com/tag/eclipse.html"><span class="cat-label-blue"></span>Eclipse</a></li>
                             <li><a href="http://d.ktmtt.com/tag/webkit.html"><span class="cat-label-blue"></span>Webkit</a></li>
                             <li><a href="http://d.ktmtt.com/tag/twitter.html"><span class="cat-label-blue"></span>twitter</a></li>
@@ -118,7 +118,7 @@
 
 <div class="pure-u-3-4 margin-blue">
     <h1 class="h1-pad">
-Posts tagged 'docker'    </h1>
+Posts tagged 'composer'    </h1>
 </div>
 <div class="pure-u-3-4">
     <div class="article-item margin-blue pure-g">
@@ -128,20 +128,27 @@ Posts tagged 'docker'    </h1>
 
         <div class="pure-u-3-4">
             <h4 class="article-title">
-                <a href="http://d.ktmtt.com/-/2014/01/07/docker/" rel='bookmark'>Docker</a>
+                <a href="http://d.ktmtt.com/-/2014/01/20/composer-failed-to-execute-git-checkout-error/" rel='bookmark'>composerで'Failed to execute git checkout'が出るときの対処法</a>
                 <p class="pure-u-1 email-desc2">
-                    2014-01-07
+                    2014-01-20
                 </p>
             </h4>
             <div class="article-summary">
-                <p>結構好き。実行時のコンテキストを呼んでImmutableなアプリが動く。
-DockerでアプリやDBのコンテナを別々に動かして環境変数経由でそれぞれを繋ぐと</p>
-<ul class="simple">
-<li>アプリ本体</li>
-<li>外部に依存している部分の設定(e.g. DBの接続先)</li>
-</ul>
-<p>が分離できるのでおしゃれ。
-気づいたらなんでもかんでもこれでやろうとしてて、自分の遊びプロジェクトがいつまでたっても完成しない。</p>
+                <p>composerの依存ライブラリでgitのレポジトリからチェックアウトするものがあったのだけど(phpunit)
+たまたまその時上手くチェックアウトできない状態だったため下のようなエラーが出でしまった。</p>
+<div class="highlight"><pre>- Installing phpunit/phpunit <span class="o">(</span>3.7.x-dev 50880d1<span class="o">)</span>
+  Cloning 50880d1f546fec2b55fe6903ee7d5aef3fa70b76
+
+<span class="o">[</span>RuntimeException<span class="o">]</span>
+Failed to execute git checkout <span class="s1">&#39;50880d1f546fec2b55fe6903ee7d5aef3fa70b76&#39;</span> <span class="o">&amp;&amp;</span> git reset --hard <span class="s1">&#39;50880d1f546fec2b55fe6903ee7d5aef3fa70b76&#39;</span>
+
+error: You have <span class="nb">local </span>changes to <span class="s1">&#39;phpunit&#39;</span>; cannot switch branches.
+</pre></div>
+<p>対処</p>
+<div class="highlight"><pre>php composer.phar install --prefer-dist
+</pre></div>
+<p><tt class="docutils literal"><span class="pre">--prefer-dist</span></tt> はソースコードをチェックアウトしてくるのじゃなくて、アーカイブから取得してくれる。githubだったらタグがついてるやつ。
+普段からつけた方が良いな。</p>
 
             </div>
         </div>
