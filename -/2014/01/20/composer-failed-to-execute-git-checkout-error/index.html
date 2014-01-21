@@ -19,13 +19,13 @@
 
     <!-- Open Graph tags -->
             <meta property="og:type" content="article"/>
-            <meta property="og:title" content="最近買ったもの"/>
-            <meta property="og:url" content="http://d.ktmtt.com/-/2014/01/17/bought-gopro-qc15/"/>
-            <meta property="og:description" content="GoProのいちばんいいやつ 64GBのMicroSD(SDXC) SanDisk Ultra BOSEのQC15 6台必要になったのでそのうち1台を買った。 6台あれば 360Heros できる。 SanDiskのExtreme Proを持っていたけどGoProはmicroSDしか対応していなかった。 それとは関係無いんだけど、前々から欲しかったQC15を買った。 散々悩んだのだけどやっぱりほしい。"/>
+            <meta property="og:title" content="composerで'Failed to execute git checkout'が出るときの対処法"/>
+            <meta property="og:url" content="http://d.ktmtt.com/-/2014/01/20/composer-failed-to-execute-git-checkout-error/"/>
+            <meta property="og:description" content="composerの依存ライブラリでgitのレポジトリからチェックアウトするものがあったのだけど(phpunit) たまたまその時上手くチェックアウトできない状態だったため下のようなエラーが出でしまった。 - Installing phpunit/phpunit (3.7.x-dev 50880d1) Cloning 50880d1f546fec2b55fe6903ee7d5aef3fa70b76 [RuntimeException] Failed to execute git checkout '50880d1f546fec2b55fe6903ee7d5aef3fa70b76' && git reset --hard '50880d1f546fec2b55fe6903ee7d5aef3fa70b76' error: You have local changes to 'phpunit'; cannot switch branches. 対処 php composer.phar install --prefer-dist --prefer-dist はソースコードをチェックアウトしてくるのじゃなくて、アーカイブから取得してくれる。githubだったらタグがついてるやつ。 普段からつけた方が良いな。"/>
 
         <link href="http://d.ktmtt.com/feeds/atom.xml" type="application/atom+xml" rel="alternate" title="ktmtt RSS Feed" />
 
-        <title>最近買ったもの // ktmtt // </title>
+        <title>composerで'Failed to execute git checkout'が出るときの対処法 // ktmtt // </title>
 
 <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -119,27 +119,31 @@
         <div class="article-content margin-blue">
             <div class="article-content-header pure-g">
                 <div class="pure-u-1">
-                    <h1 class="article-content-title">最近買ったもの</h1>
+                    <h1 class="article-content-title">composerで'Failed to execute git checkout'が出るときの対処法</h1>
                     <p class="article-content-subtitle">
-                        by <a href="http://d.ktmtt.com/author/ka2n.html">ka2n</a> on <span>2014-01-17</span>
+                        by <a href="http://d.ktmtt.com/author/ka2n.html">ka2n</a> on <span>2014-01-20</span>
                         // Posted in <a href="http://d.ktmtt.com/category/content.html">content</a>
                     </p>
                 </div>
             </div>
             <div class="article-content-body">
                 <p>
-                    <p><img alt="okaiage_img" src="/files/images/okaiage_amazon.png" /></p>
-<ul class="simple">
-<li>GoProのいちばんいいやつ</li>
-<li>64GBのMicroSD(SDXC) SanDisk Ultra</li>
-<li>BOSEのQC15</li>
-</ul>
-<p>6台必要になったのでそのうち1台を買った。
-6台あれば <a class="reference external" href="http://www.360heros.com/">360Heros</a> できる。
-SanDiskのExtreme Proを持っていたけどGoProはmicroSDしか対応していなかった。
-それとは関係無いんだけど、前々から欲しかったQC15を買った。
-散々悩んだのだけどやっぱりほしい。</p>
-<iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=2253042-22&o=9&p=8&l=as1&asins=B00GOKOT0C&ref=qf_sp_asin_til&fc1=000000&IS2=1&lt1=_top&m=amazon&lc1=0000FF&bc1=FFFFFF&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe><iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=2253042-22&o=9&p=8&l=as1&asins=B0081EAK34&ref=tf_til&fc1=000000&IS2=1&lt1=_top&m=amazon&lc1=0000FF&bc1=FFFFFF&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe><iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=2253042-22&o=9&p=8&l=as1&asins=B0056Z73FY&ref=tf_til&fc1=000000&IS2=1&lt1=_top&m=amazon&lc1=0000FF&bc1=FFFFFF&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+                    <p>composerの依存ライブラリでgitのレポジトリからチェックアウトするものがあったのだけど(phpunit)
+たまたまその時上手くチェックアウトできない状態だったため下のようなエラーが出でしまった。</p>
+<div class="highlight"><pre>- Installing phpunit/phpunit <span class="o">(</span>3.7.x-dev 50880d1<span class="o">)</span>
+  Cloning 50880d1f546fec2b55fe6903ee7d5aef3fa70b76
+
+<span class="o">[</span>RuntimeException<span class="o">]</span>
+Failed to execute git checkout <span class="s1">&#39;50880d1f546fec2b55fe6903ee7d5aef3fa70b76&#39;</span> <span class="o">&amp;&amp;</span> git reset --hard <span class="s1">&#39;50880d1f546fec2b55fe6903ee7d5aef3fa70b76&#39;</span>
+
+error: You have <span class="nb">local </span>changes to <span class="s1">&#39;phpunit&#39;</span>; cannot switch branches.
+</pre></div>
+<p>対処</p>
+<div class="highlight"><pre>php composer.phar install --prefer-dist
+</pre></div>
+<p><tt class="docutils literal"><span class="pre">--prefer-dist</span></tt> はソースコードをチェックアウトしてくるのじゃなくて、アーカイブから取得してくれる。githubだったらタグがついてるやつ。
+普段からつけた方が良いな。</p>
+
                 </p>
  
             </div>

@@ -19,13 +19,13 @@
 
     <!-- Open Graph tags -->
             <meta property="og:type" content="article"/>
-            <meta property="og:title" content="最近買ったもの"/>
-            <meta property="og:url" content="http://d.ktmtt.com/-/2014/01/17/bought-gopro-qc15/"/>
-            <meta property="og:description" content="GoProのいちばんいいやつ 64GBのMicroSD(SDXC) SanDisk Ultra BOSEのQC15 6台必要になったのでそのうち1台を買った。 6台あれば 360Heros できる。 SanDiskのExtreme Proを持っていたけどGoProはmicroSDしか対応していなかった。 それとは関係無いんだけど、前々から欲しかったQC15を買った。 散々悩んだのだけどやっぱりほしい。"/>
+            <meta property="og:title" content="gitのコミット回数をiOSのCFBundleVersionに設定する"/>
+            <meta property="og:url" content="http://d.ktmtt.com/-/2014/01/14/git-commit-count-to-cfbundleversion/"/>
+            <meta property="og:description" content="開発ディレクトリのInfo.plistではなくて、ビルド後のInfo.plistに書き込んだ方が吉 #!/bin/bash git=`which git` buildNumber=$($git log --pretty=oneline | wc -l) buildNumber=$(expr $(echo $buildNumber) + 1352) plistPath="${BUILT_PRODUCTS_DIR}/${EXECUTABLE_NAME}.app/Info.plist" echo buildNumber: $buildNumber echo plistPath: $plistPath if [ -f "${plistPath}" ]; then /usr/libexec/PlistBuddy -c "Set :CFBundleVersion ${buildNumber}" "${plistPath}" else echo "Skipping versioning..." fi"/>
 
         <link href="http://d.ktmtt.com/feeds/atom.xml" type="application/atom+xml" rel="alternate" title="ktmtt RSS Feed" />
 
-        <title>最近買ったもの // ktmtt // </title>
+        <title>gitのコミット回数をiOSのCFBundleVersionに設定する // ktmtt // </title>
 
 <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -119,27 +119,30 @@
         <div class="article-content margin-blue">
             <div class="article-content-header pure-g">
                 <div class="pure-u-1">
-                    <h1 class="article-content-title">最近買ったもの</h1>
+                    <h1 class="article-content-title">gitのコミット回数をiOSのCFBundleVersionに設定する</h1>
                     <p class="article-content-subtitle">
-                        by <a href="http://d.ktmtt.com/author/ka2n.html">ka2n</a> on <span>2014-01-17</span>
+                        by <a href="http://d.ktmtt.com/author/ka2n.html">ka2n</a> on <span>2014-01-14</span>
                         // Posted in <a href="http://d.ktmtt.com/category/content.html">content</a>
                     </p>
                 </div>
             </div>
             <div class="article-content-body">
                 <p>
-                    <p><img alt="okaiage_img" src="/files/images/okaiage_amazon.png" /></p>
-<ul class="simple">
-<li>GoProのいちばんいいやつ</li>
-<li>64GBのMicroSD(SDXC) SanDisk Ultra</li>
-<li>BOSEのQC15</li>
-</ul>
-<p>6台必要になったのでそのうち1台を買った。
-6台あれば <a class="reference external" href="http://www.360heros.com/">360Heros</a> できる。
-SanDiskのExtreme Proを持っていたけどGoProはmicroSDしか対応していなかった。
-それとは関係無いんだけど、前々から欲しかったQC15を買った。
-散々悩んだのだけどやっぱりほしい。</p>
-<iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=2253042-22&o=9&p=8&l=as1&asins=B00GOKOT0C&ref=qf_sp_asin_til&fc1=000000&IS2=1&lt1=_top&m=amazon&lc1=0000FF&bc1=FFFFFF&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe><iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=2253042-22&o=9&p=8&l=as1&asins=B0081EAK34&ref=tf_til&fc1=000000&IS2=1&lt1=_top&m=amazon&lc1=0000FF&bc1=FFFFFF&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe><iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=2253042-22&o=9&p=8&l=as1&asins=B0056Z73FY&ref=tf_til&fc1=000000&IS2=1&lt1=_top&m=amazon&lc1=0000FF&bc1=FFFFFF&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+                    <p>開発ディレクトリのInfo.plistではなくて、ビルド後のInfo.plistに書き込んだ方が吉</p>
+<div class="highlight"><pre><span class="c">#!/bin/bash</span>
+<span class="nv">git</span><span class="o">=</span><span class="sb">`</span>which git<span class="sb">`</span>
+<span class="nv">buildNumber</span><span class="o">=</span><span class="k">$(</span><span class="nv">$git</span> log --pretty<span class="o">=</span>oneline | wc -l<span class="k">)</span>
+<span class="nv">buildNumber</span><span class="o">=</span><span class="k">$(</span>expr <span class="k">$(</span><span class="nb">echo</span> <span class="nv">$buildNumber</span><span class="k">)</span> + 1352<span class="k">)</span>
+<span class="nv">plistPath</span><span class="o">=</span><span class="s2">&quot;${BUILT_PRODUCTS_DIR}/${EXECUTABLE_NAME}.app/Info.plist&quot;</span>
+<span class="nb">echo </span>buildNumber: <span class="nv">$buildNumber</span>
+<span class="nb">echo </span>plistPath: <span class="nv">$plistPath</span>
+<span class="k">if</span> <span class="o">[</span> -f <span class="s2">&quot;${plistPath}&quot;</span> <span class="o">]</span>; <span class="k">then</span>
+    /usr/libexec/PlistBuddy -c <span class="s2">&quot;Set :CFBundleVersion ${buildNumber}&quot;</span> <span class="s2">&quot;${plistPath}&quot;</span>
+<span class="k">else</span>
+<span class="k">    </span><span class="nb">echo</span> <span class="s2">&quot;Skipping versioning...&quot;</span>
+<span class="k">fi</span>
+</pre></div>
+
                 </p>
  
             </div>

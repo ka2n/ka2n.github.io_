@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ktmtt</title><link>http://d.ktmtt.com/</link><description></description><atom:link href="http://d.ktmtt.com/feeds/atom.xml" rel="self"></atom:link><lastBuildDate>Sat, 18 Jan 2014 00:00:00 +0900</lastBuildDate><item><title>2014-01-18</title><link>http://d.ktmtt.com/-/2014/01/18/2014-01-18/</link><description>&lt;p&gt;&lt;img alt="gopro" src="/files/images/gopro.jpg" /&gt;&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ktmtt</title><link>http://d.ktmtt.com/</link><description></description><atom:link href="http://d.ktmtt.com/feeds/atom.xml" rel="self"></atom:link><lastBuildDate>Mon, 20 Jan 2014 00:00:00 +0900</lastBuildDate><item><title>composerで'Failed to execute git checkout'が出るときの対処法</title><link>http://d.ktmtt.com/-/2014/01/20/composer-failed-to-execute-git-checkout-error/</link><description>&lt;p&gt;composerの依存ライブラリでgitのレポジトリからチェックアウトするものがあったのだけど(phpunit)
+たまたまその時上手くチェックアウトできない状態だったため下のようなエラーが出でしまった。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;- Installing phpunit/phpunit &lt;span class="o"&gt;(&lt;/span&gt;3.7.x-dev 50880d1&lt;span class="o"&gt;)&lt;/span&gt;
+  Cloning 50880d1f546fec2b55fe6903ee7d5aef3fa70b76
+
+&lt;span class="o"&gt;[&lt;/span&gt;RuntimeException&lt;span class="o"&gt;]&lt;/span&gt;
+Failed to execute git checkout &lt;span class="s1"&gt;&amp;#39;50880d1f546fec2b55fe6903ee7d5aef3fa70b76&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; git reset --hard &lt;span class="s1"&gt;&amp;#39;50880d1f546fec2b55fe6903ee7d5aef3fa70b76&amp;#39;&lt;/span&gt;
+
+error: You have &lt;span class="nb"&gt;local &lt;/span&gt;changes to &lt;span class="s1"&gt;&amp;#39;phpunit&amp;#39;&lt;/span&gt;; cannot switch branches.
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;対処&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;php composer.phar install --prefer-dist
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;--prefer-dist&lt;/span&gt;&lt;/tt&gt; はソースコードをチェックアウトしてくるのじゃなくて、アーカイブから取得してくれる。githubだったらタグがついてるやつ。
+普段からつけた方が良いな。&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Mon, 20 Jan 2014 00:00:00 +0900</pubDate><guid>tag:d.ktmtt.com,2014-01-20:-/2014/01/20/composer-failed-to-execute-git-checkout-error/</guid></item><item><title>2014-01-18</title><link>http://d.ktmtt.com/-/2014/01/18/2014-01-18/</link><description>&lt;p&gt;&lt;img alt="gopro" src="/files/images/gopro.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;SDカードも届いたのでGoPro空けた。
 タイムラプスやろうと思う。&lt;/p&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Sat, 18 Jan 2014 00:00:00 +0900</pubDate><guid>tag:d.ktmtt.com,2014-01-18:-/2014/01/18/2014-01-18/</guid><category>GoPro</category></item><item><title>2014-01-17</title><link>http://d.ktmtt.com/-/2014/01/17/2014-01-17/</link><description>&lt;p&gt;GoPro届いた。とりあえず開けにくい、開けにくい、箱敗れた。
@@ -366,23 +381,4 @@ Kindleのアップデートを行う を選択します&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;for ore.&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Tue, 18 Sep 2012 04:54:00 +0900</pubDate><guid>tag:d.ktmtt.com,2012-09-18:-/2012/09/18/yaser-ore/</guid></item><item><title>ただの板になってしまったkobo Touch復活法(ハードキーで出荷時に戻す)</title><link>http://d.ktmtt.com/-/2012/07/21/kobo-touch/</link><description>&lt;p&gt;&lt;a class="reference external" href="http://hb.afl.rakuten.co.jp/hgc/0fd46a7a.20c8ded4.0fd46a7b.ff3a0d35/?pc=http%3a%2f%2fbooks.rakuten.co.jp%2frb%2fkobo-Touch-%25EF%25BC%2588%25E3%2582%25B7%25E3%2583%25AB%25E3%2583%2590%25E3%2583%25BC%25EF%25BC%2589-0681495000050%2fitem%2f11749016%2f%3fscid%3dwi_kb_btn_btn_item_dev-02%26scid%3daf_ich_link_urltxt&amp;amp;m=http%3a%2f%2fm.rakuten.co.jp%2fev%2fbook%2"&gt;kobo Touch&lt;/a&gt;買いました。&lt;/p&gt;
-&lt;p&gt;手元のepubを入れた所、めちゃくちゃ遅かったので激しく萎えたのですが、拡張子を*.kepub.epubに変えた所快適になりました。
-最高！でもハードキー欲しい！&lt;/p&gt;
-&lt;p&gt;ところで、試しにディスクユーティリティでKOBOeReaderを初期化してみたところ、私のkobo
-Touchは見事ただの白くて四角い板に変身…
-ソフトリセットは裏のピンを押せばできるので、初期登録画面までは行くが、USBでPCとつないでもKobo
-Desktopは沈黙してしまう。コマッタ。&lt;/p&gt;
-&lt;p&gt;散々ググってようやく見つけたkobo Touchのリセットではなく&lt;strong&gt;復元&lt;/strong&gt;をする方法をメモしておきます。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;電源OFF&lt;/li&gt;
-&lt;li&gt;ホームボタンを押しながら、電源ON&lt;/li&gt;
-&lt;li&gt;(Restoringとか復元とか画面に表示されてしばらく経つ)&lt;/li&gt;
-&lt;li&gt;黒いkoboの起動画面が表示される。(この時点で復元OK)&lt;/li&gt;
-&lt;li&gt;実は電源が切れているので、電源ON&lt;/li&gt;
-&lt;li&gt;復元完了！ (よかった！kobo Desktopも&lt;a class="reference external" href="http://ktmtt.com/diary/?attachment_id=643"&gt;認識してくれた！&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;さあて、元に戻ったので、皆さん人柱頑張りましょう。&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Sat, 21 Jul 2012 06:28:00 +0900</pubDate><guid>tag:d.ktmtt.com,2012-07-21:-/2012/07/21/kobo-touch/</guid><category>kobo</category></item></channel></rss>
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Tue, 18 Sep 2012 04:54:00 +0900</pubDate><guid>tag:d.ktmtt.com,2012-09-18:-/2012/09/18/yaser-ore/</guid></item></channel></rss>
