@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ktmtt</title><link>http://d.ktmtt.com/</link><description></description><atom:link href="http://d.ktmtt.com/feeds/atom.xml" rel="self"></atom:link><lastBuildDate>Wed, 22 Jan 2014 00:00:00 +0900</lastBuildDate><item><title>composerで'Failed to execute git checkout'が出るときの対処法</title><link>http://d.ktmtt.com/-/2014/01/22/composer-failed-to-execute-git-checkout-error/</link><description>&lt;p&gt;composerの依存ライブラリでgitのレポジトリからチェックアウトするものがあったのだけど(phpunit)
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ktmtt</title><link>http://d.ktmtt.com/</link><description></description><atom:link href="http://d.ktmtt.com/feeds/atom.xml" rel="self"></atom:link><lastBuildDate>Sat, 08 Feb 2014 00:00:00 +0900</lastBuildDate><item><title>2014-02-08</title><link>http://d.ktmtt.com/-/2014/02/08/2014-02-08/</link><description>&lt;p&gt;最近Chrome使ってなかったから気付かなかったけど
+&lt;cite&gt;chrome://net-internals&lt;/cite&gt; のデザインが少し変わっていて &lt;cite&gt;chrome://net-internals/#dns&lt;/cite&gt;
+にしないとDNSリゾルバの画面にいけなくなってた。&lt;/p&gt;
+&lt;p&gt;リゾルバのキャッシュを手動で消したくなることがたまによくあるのでワンライナーで消す方法が知りたいです(感想)&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Sat, 08 Feb 2014 00:00:00 +0900</pubDate><guid>tag:d.ktmtt.com,2014-02-08:-/2014/02/08/2014-02-08/</guid><category>chrome</category></item><item><title>composerで'Failed to execute git checkout'が出るときの対処法</title><link>http://d.ktmtt.com/-/2014/01/22/composer-failed-to-execute-git-checkout-error/</link><description>&lt;p&gt;composerの依存ライブラリでgitのレポジトリからチェックアウトするものがあったのだけど(phpunit)
 たまたまその時上手くチェックアウトできない状態だったため下のようなエラーが出でしまった。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;- Installing phpunit/phpunit &lt;span class="o"&gt;(&lt;/span&gt;3.7.x-dev 50880d1&lt;span class="o"&gt;)&lt;/span&gt;
   Cloning 50880d1f546fec2b55fe6903ee7d5aef3fa70b76
@@ -376,5 +380,4 @@ Kindleのアップデートを行う を選択します&lt;/li&gt;
 &lt;li&gt;確認のダイアログがでるので、OKします&lt;/li&gt;
 &lt;li&gt;すると勝手に再起動してアップデートが実行されます&lt;/li&gt;
 &lt;/ol&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Wed, 12 Dec 2012 01:47:00 +0900</pubDate><guid>tag:d.ktmtt.com,2012-12-12:-/2012/12/12/kindle-paperwhite-firmware-update/</guid><category>kindle</category></item><item><title>FILENAME_METADATA example</title><link>http://d.ktmtt.com/-/2012/11/30/filename_metadata-example/</link><description>&lt;p&gt;Some cool stuff!&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Fri, 30 Nov 2012 00:00:00 +0900</pubDate><guid>tag:d.ktmtt.com,2012-11-30:-/2012/11/30/filename_metadata-example/</guid></item></channel></rss>
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Wed, 12 Dec 2012 01:47:00 +0900</pubDate><guid>tag:d.ktmtt.com,2012-12-12:-/2012/12/12/kindle-paperwhite-firmware-update/</guid><category>kindle</category></item></channel></rss>
