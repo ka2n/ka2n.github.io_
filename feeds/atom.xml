@@ -6,7 +6,7 @@
 &lt;div class="highlight"&gt;&lt;pre&gt;command clip echo RIL.addCurrent() !== false ? &amp;#39;Success&amp;#39; : &amp;#39;Failed (or already clipped?)&amp;#39;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://addons.mozilla.org/en-US/firefox/addon/read-it-later/"&gt;Pocketの拡張機能&lt;/a&gt; をあらかじめFirefoxに入れておく。&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Sun, 23 Feb 2014 00:00:00 +0900</pubDate><guid>tag:d.ktmtt.com,2014-02-23:-/2014/02/23/firefox-vimperator-pocket/</guid></item><item><title>2014-02-08</title><link>http://d.ktmtt.com/-/2014/02/08/2014-02-08/</link><description>&lt;p&gt;最近Chrome使ってなかったから気付かなかったけど
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Sun, 23 Feb 2014 00:00:00 +0900</pubDate><guid>tag:d.ktmtt.com,2014-02-23:-/2014/02/23/firefox-vimperator-pocket/</guid><category>Firefox</category><category>Vimperator</category><category>Pocket</category></item><item><title>2014-02-08</title><link>http://d.ktmtt.com/-/2014/02/08/2014-02-08/</link><description>&lt;p&gt;最近Chrome使ってなかったから気付かなかったけど
 &lt;cite&gt;chrome://net-internals&lt;/cite&gt; のデザインが少し変わっていて &lt;cite&gt;chrome://net-internals/#dns&lt;/cite&gt;
 にしないとDNSリゾルバの画面にいけなくなってた。&lt;/p&gt;
 &lt;p&gt;リゾルバのキャッシュを手動で消したくなることがたまによくあるのでワンライナーで消す方法が知りたいです(感想)&lt;/p&gt;
