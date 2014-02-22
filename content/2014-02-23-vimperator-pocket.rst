@@ -3,6 +3,8 @@ VimperatorからPocketに投稿できるようにした
 :date: 2014-02-23
 :author: ka2n
 :slug: firefox-vimperator-pocket
+:category: general
+:tags: Firefox, Vimperator, Pocket
 
 Pocketを使っているをよく見るのと、Mac用のアプリが良い感じだったのでInstapaperから乗り換えた。
 元ReadItLator、デザインとブランディングは大切だなあ。あとユーザーの情報収集のスタイルがツールにマッチしたってのもあるだろう。
