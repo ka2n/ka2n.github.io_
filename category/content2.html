@@ -25,7 +25,7 @@
 
         <link href="http://d.ktmtt.com/feeds/atom.xml" type="application/atom+xml" rel="alternate" title="ktmtt RSS Feed" />
 
-        <title>FuelPHP tag // ktmtt // </title>
+        <title>content category // ktmtt // </title>
 
 <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -67,7 +67,7 @@
                             <li><a href="http://d.ktmtt.com/tag/php.html"><span class="cat-label-blue"></span>php</a></li>
                             <li><a href="http://d.ktmtt.com/tag/javascript.html"><span class="cat-label-blue"></span>javascript</a></li>
                             <li><a href="http://d.ktmtt.com/tag/kindle.html"><span class="cat-label-blue"></span>kindle</a></li>
-                            <li><a href="http://d.ktmtt.com/tag/fuelphp.html"><span class="cat-label-yellow"<span class="cat-label-blue"></span>FuelPHP</a></li>
+                            <li><a href="http://d.ktmtt.com/tag/fuelphp.html"><span class="cat-label-blue"></span>FuelPHP</a></li>
                             <li><a href="http://d.ktmtt.com/tag/fitbit.html"><span class="cat-label-blue"></span>fitbit</a></li>
                             <li><a href="http://d.ktmtt.com/tag/jsx.html"><span class="cat-label-blue"></span>JSX</a></li>
                             <li><a href="http://d.ktmtt.com/tag/test.html"><span class="cat-label-blue"></span>test</a></li>
@@ -120,86 +120,37 @@
 
 <div class="pure-u-3-4 margin-blue">
     <h1 class="h1-pad">
-Posts tagged 'FuelPHP'    </h1>
+Posts in 'content'            &ndash; Page&nbsp;2
+    </h1>
 </div>
 <div class="pure-u-3-4">
-    <div class="article-item margin-blue pure-g">
+    <div class="article-item margin-yellow pure-g">
         <div class="pure-u">
             <img class="author-avatar" alt="ka2n" src="http://www.gravatar.com/avatar/6041a51295536d946d4554a1905b3097" height="64" width="64">
         </div>
 
         <div class="pure-u-3-4">
             <h4 class="article-title">
-                <a href="http://d.ktmtt.com/-/2013/06/25/named-routing-with-regexp-in-fuelphp/" rel='bookmark'>Named routing with regexp in FuelPHP</a>
+                <a href="http://d.ktmtt.com/-/2010/10/15/unbelievable/" rel='bookmark'>Unbelievable !</a>
                 <p class="pure-u-1 email-desc2">
-                    2013-06-25
+                    2010-10-15
                 </p>
             </h4>
             <div class="article-summary">
-                <p>FuelPHPでルーティングルールを設定する時, (:segment)や(:num),(:alpha)等を使えます。
-また、:name, :hogeなど名前付きのルートを設定することも可能です。</p>
-<p>ただし、名前付きのルートは内部で (?P&lt;$1&gt;.+?) になる。名前を指定すると正規表現のルールが決め打ちになってします。
-なので正規表現で書いてみる。</p>
-<p>/foo/(:num)/bar を名前付きでマッチする例</p>
-<div class="highlight"><pre>/foo/(?P&lt;name&gt;:num?)/bar
-</pre></div>
-<p>そのままベタで正規表現で書く例</p>
-<div class="highlight"><pre>/foo/(?P&lt;name&gt;\d{2}?)/bar
-</pre></div>
-<p>マッチした名前のパラメータは $this-&gt;param('name')で取り出すことができます。</p>
-<p>よくドキュメントを読むと &quot;You can include any regex into your routes&quot; って書いてあるんですね。知らなかった。</p>
+                <p>Or completely awesome. Depends the needs.</p>
+<p><a class="reference external" href="|filename|/cat1/markdown-article.md">a root-relative link to markdown-article</a>
+<a class="reference external" href="|filename|cat1/markdown-article.md">a file-relative link to markdown-article</a></p>
 
-            </div>
-        </div>
-    </div>
-    <div class="article-item margin-blue pure-g">
-        <div class="pure-u">
-            <img class="author-avatar" alt="ka2n" src="http://www.gravatar.com/avatar/6041a51295536d946d4554a1905b3097" height="64" width="64">
-        </div>
-
-        <div class="pure-u-3-4">
-            <h4 class="article-title">
-                <a href="http://d.ktmtt.com/-/2012/01/20/pc-view-fuelphp/" rel='bookmark'>スマートフォンとPCで表示するViewを変更 #FuelPHP</a>
-                <p class="pure-u-1 email-desc2">
-                    2012-01-20
-                </p>
-            </h4>
-            <div class="article-summary">
-                <p>最近FuelPHP初めましたっ///</p>
-<p>同一のURLでPCとスマートフォンに対応したいですよね。</p>
-<ul class="simple">
-<li>CSS3 Media Queriesを使ってクライアントサイドで振り分ける</li>
-<li>UserAgentを見てサーバサイドで振り分ける</li>
-</ul>
-<p>なんて方法があると思います。
-全部Media Queriesを使ってやろうとすると、スマホ用とPC用とPad用でごっちゃごちゃになっちゃいそうです。
-まず、PCとスマホ/Padで分けてから、Media QueriesでスマホとPadで分けるのがいいんじゃないかと個人的には思います。
-スマホとPadはタッチデバイス(であることが多い)ですからね。</p>
-<p>FuelPHPには、UserAgent周りを扱うAgentクラスがありますのでそれを使います。
-あと、Themeクラスなんていうものもあります(これなぜかドキュメントに載っていない)。
-この2つを使ってみたいと思います。</p>
-<p>作戦</p>
-<blockquote>
-FuelのControllerクラスを拡張してAppControllerクラスを作る。
-AppController::beforeでUserAgentを判別し、テーマを切り替える。
-レスポンスはThemeクラスを使って構築する。</blockquote>
-<p>よし、早速やってみます。</p>
-<p>APPPATH/classes/controller/app_controller.php</p>
-<div class="highlight"><pre><span class="cp">&lt;?php</span>
-<span class="k">class</span> <span class="nc">AppController</span> <span class="k">extends</span> <span class="nx">Fuel\Core\Controller</span>
-<span class="p">{</span>
-    <span class="k">public</span> <span class="k">function</span> <span class="nf">before</span><span class="p">()</span>
-    <span class="p">{</span>
-        <span class="k">return</span> <span class="k">parent</span><span class="o">::</span><span class="na">before ...</span></pre></div>
             </div>
         </div>
     </div>
 <div class="pagination-wrapper">
     <div class="pagination">
         <div class="pagination-left">
-                &nbsp;
+                    <a href="http://d.ktmtt.com/category/content.html">
+                <span>&larr; Newer posts</span></a>
         </div>
-        <span>Page 1 / 1</span>
+        <span>Page 2 / 2</span>
         <div class="pagination-right">
         </div>
     </div>

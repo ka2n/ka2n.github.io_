@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ktmtt</title><link>http://d.ktmtt.com/</link><description></description><atom:link href="http://d.ktmtt.com/feeds/atom.xml" rel="self"></atom:link><lastBuildDate>Sat, 08 Feb 2014 00:00:00 +0900</lastBuildDate><item><title>2014-02-08</title><link>http://d.ktmtt.com/-/2014/02/08/2014-02-08/</link><description>&lt;p&gt;最近Chrome使ってなかったから気付かなかったけど
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ktmtt</title><link>http://d.ktmtt.com/</link><description></description><atom:link href="http://d.ktmtt.com/feeds/atom.xml" rel="self"></atom:link><lastBuildDate>Sun, 23 Feb 2014 00:00:00 +0900</lastBuildDate><item><title>VimperatorからPocketに投稿できるようにした</title><link>http://d.ktmtt.com/-/2014/02/23/firefox-vimperator-pocket/</link><description>&lt;p&gt;Pocketを使っているをよく見るのと、Mac用のアプリが良い感じだったのでInstapaperから乗り換えた。
+元ReadItLator、デザインとブランディングは大切だなあ。あとユーザーの情報収集のスタイルがツールにマッチしたってのもあるだろう。
+自分はVimperatorからPocketに投稿したかったので以下の方法で設定した。&lt;/p&gt;
+&lt;p&gt;.vimperatorrcに以下を追加&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;command clip echo RIL.addCurrent() !== false ? &amp;#39;Success&amp;#39; : &amp;#39;Failed (or already clipped?)&amp;#39;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://addons.mozilla.org/en-US/firefox/addon/read-it-later/"&gt;Pocketの拡張機能&lt;/a&gt; をあらかじめFirefoxに入れておく。&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Sun, 23 Feb 2014 00:00:00 +0900</pubDate><guid>tag:d.ktmtt.com,2014-02-23:-/2014/02/23/firefox-vimperator-pocket/</guid></item><item><title>2014-02-08</title><link>http://d.ktmtt.com/-/2014/02/08/2014-02-08/</link><description>&lt;p&gt;最近Chrome使ってなかったから気付かなかったけど
 &lt;cite&gt;chrome://net-internals&lt;/cite&gt; のデザインが少し変わっていて &lt;cite&gt;chrome://net-internals/#dns&lt;/cite&gt;
 にしないとDNSリゾルバの画面にいけなくなってた。&lt;/p&gt;
 &lt;p&gt;リゾルバのキャッシュを手動で消したくなることがたまによくあるのでワンライナーで消す方法が知りたいです(感想)&lt;/p&gt;
@@ -368,16 +375,4 @@ paperwhiteの組み合わせが一番しっくりきます。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;文鎮化した際はどうしようもないようなので、その時は観念しましょう。&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Thu, 03 Jan 2013 20:58:00 +0900</pubDate><guid>tag:d.ktmtt.com,2013-01-03:-/2013/01/03/kindle-paperwhite-5-3-jailbreak/</guid><category>kindle</category></item><item><title>Kindle paperwhiteのファームウェアアップデート方法</title><link>http://d.ktmtt.com/-/2012/12/12/kindle-paperwhite-firmware-update/</link><description>&lt;ol class="arabic simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.amazon.co.uk/gp/help/customer/display.html/?nodeId=201063560"&gt;ここ&lt;/a&gt;を開きます&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Download Version
-5.3.1&lt;/strong&gt;と書いてある所からファームウェアをダウンロードします&lt;/li&gt;
-&lt;li&gt;kindleをUSBでPCに繋ぎます&lt;/li&gt;
-&lt;li&gt;Kindleがマウントされるのでダウンロードしたファイルをそこへそのまま突っ込みます&lt;/li&gt;
-&lt;li&gt;突っ込み終わったらアンマウントします&lt;/li&gt;
-&lt;li&gt;kindleの右上のメニュー &amp;gt; 設定 &amp;gt; 右上のメニュー &amp;gt;
-Kindleのアップデートを行う を選択します&lt;/li&gt;
-&lt;li&gt;確認のダイアログがでるので、OKします&lt;/li&gt;
-&lt;li&gt;すると勝手に再起動してアップデートが実行されます&lt;/li&gt;
-&lt;/ol&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Wed, 12 Dec 2012 01:47:00 +0900</pubDate><guid>tag:d.ktmtt.com,2012-12-12:-/2012/12/12/kindle-paperwhite-firmware-update/</guid><category>kindle</category></item></channel></rss>
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Thu, 03 Jan 2013 20:58:00 +0900</pubDate><guid>tag:d.ktmtt.com,2013-01-03:-/2013/01/03/kindle-paperwhite-5-3-jailbreak/</guid><category>kindle</category></item></channel></rss>
