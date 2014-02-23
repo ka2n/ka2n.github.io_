@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ktmtt</title><link>http://d.ktmtt.com/</link><description></description><atom:link href="http://d.ktmtt.com/feeds/atom.xml" rel="self"></atom:link><lastBuildDate>Sun, 23 Feb 2014 00:00:00 +0900</lastBuildDate><item><title>VimperatorからPocketに投稿できるようにした</title><link>http://d.ktmtt.com/-/2014/02/23/firefox-vimperator-pocket/</link><description>&lt;p&gt;Pocketを使っているをよく見るのと、Mac用のアプリが良い感じだったのでInstapaperから乗り換えた。
 元ReadItLator、デザインとブランディングは大切だなあ。あとユーザーの情報収集のスタイルがツールにマッチしたってのもあるだろう。
-自分はVimperatorからPocketに投稿したかったので以下の方法で設定した。&lt;/p&gt;
+自分はVimperatorからPocketに投稿したかったので以下の方法で設定した。
+&lt;tt class="docutils literal"&gt;:clip&lt;/tt&gt; で保存できるようになる。便利。&lt;/p&gt;
 &lt;p&gt;.vimperatorrcに以下を追加&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;command clip echo RIL.addCurrent() !== false ? &amp;#39;Success&amp;#39; : &amp;#39;Failed (or already clipped?)&amp;#39;
 &lt;/pre&gt;&lt;/div&gt;
