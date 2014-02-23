@@ -9,6 +9,7 @@ VimperatorからPocketに投稿できるようにした
 Pocketを使っているをよく見るのと、Mac用のアプリが良い感じだったのでInstapaperから乗り換えた。
 元ReadItLator、デザインとブランディングは大切だなあ。あとユーザーの情報収集のスタイルがツールにマッチしたってのもあるだろう。
 自分はVimperatorからPocketに投稿したかったので以下の方法で設定した。
+``:clip`` で保存できるようになる。便利。
 
 .vimperatorrcに以下を追加
 
