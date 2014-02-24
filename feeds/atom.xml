@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ktmtt</title><link>http://d.ktmtt.com/</link><description></description><atom:link href="http://d.ktmtt.com/feeds/atom.xml" rel="self"></atom:link><lastBuildDate>Sun, 23 Feb 2014 00:00:00 +0900</lastBuildDate><item><title>VimperatorからPocketに投稿できるようにした</title><link>http://d.ktmtt.com/-/2014/02/23/firefox-vimperator-pocket/</link><description>&lt;p&gt;Pocketを使っているをよく見るのと、Mac用のアプリが良い感じだったのでInstapaperから乗り換えた。
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ktmtt</title><link>http://d.ktmtt.com/</link><description></description><atom:link href="http://d.ktmtt.com/feeds/atom.xml" rel="self"></atom:link><lastBuildDate>Mon, 24 Feb 2014 00:00:00 +0900</lastBuildDate><item><title>最近のTitaniumはセットアップが楽</title><link>http://d.ktmtt.com/-/2014/02/24/titanium-setup/</link><description>&lt;p&gt;初めてのiOSアプリを作った時まだネイティブで作れなかった。
+ちょうどTitaniumが流行っていたので試してみたらしっくりきたのでなんとかアプリを1つ作った。
+ただ、Tiは一部動きが怪しかったり(当時は)SDKの問題で審査に通らなかったりとそれなりに不満があり、このおかげでObjective-Cで開発する決心がついたとも言える。&lt;/p&gt;
+&lt;p&gt;久しぶりにTitaniumを触る機会があったのだけど、セットアップが超簡単になってて驚いた。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;npm install -g titanium
+npm install -g alloy &lt;span class="c"&gt;# 必要であれば&lt;/span&gt;
+npm install -g tishadow &lt;span class="c"&gt;# 必要であれば&lt;/span&gt;
+
+titanium sdk install --default
+Username: mail@example.com &lt;span class="c"&gt;# ユーザー名とパスワードを聞かれるので入力&lt;/span&gt;
+Passowrd: *******
+
+New version available! 3.2.1.GA
+
+Downloading http://api.appcelerator.net/p/v1/release-download?token&lt;span class="o"&gt;=&lt;/span&gt;ttttoken
+
+...
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;これでOK! すごく楽になった。でも最近Ruby触る機会が多いのでRubyMotionやりたい。&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Mon, 24 Feb 2014 00:00:00 +0900</pubDate><guid>tag:d.ktmtt.com,2014-02-24:-/2014/02/24/titanium-setup/</guid><category>titanium</category><category>iOS</category></item><item><title>VimperatorからPocketに投稿できるようにした</title><link>http://d.ktmtt.com/-/2014/02/23/firefox-vimperator-pocket/</link><description>&lt;p&gt;Pocketを使っているをよく見るのと、Mac用のアプリが良い感じだったのでInstapaperから乗り換えた。
 元ReadItLator、デザインとブランディングは大切だなあ。あとユーザーの情報収集のスタイルがツールにマッチしたってのもあるだろう。
 自分はVimperatorからPocketに投稿したかったので以下の方法で設定した。
 &lt;tt class="docutils literal"&gt;:clip&lt;/tt&gt; で保存できるようになる。便利。&lt;/p&gt;
@@ -314,66 +333,4 @@ Oneを工場出荷時へリセットする方法がわからないのでひと�
 &lt;p&gt;Fitbitは体重の記録の他に、食事、運動、睡眠の記録をする事が出来るらしい。
 フィットネス系の他のサービスと連携してデータをやり取りする事が出来るみたいです。
 ただ、よく使うiOSのアプリCyclemeterはその連携に対応していない模様。&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Thu, 03 Jan 2013 20:58:00 +0900</pubDate><guid>tag:d.ktmtt.com,2013-01-03:-/2013/01/03/fitbit-aria/</guid><category>fitbit</category><category>gadget</category></item><item><title>Kindle paperwhite 5.3をJailbreakしてみた</title><link>http://d.ktmtt.com/-/2013/01/03/kindle-paperwhite-5-3-jailbreak/</link><description>&lt;p&gt;僕も買いました。Amazon Kindle paperwhite.
-いやーバックライト便利。ワンクリック購入便利。ここの所iPhone5 + Kindle
-paperwhiteの組み合わせが一番しっくりきます。&lt;/p&gt;
-&lt;p&gt;koboハックは案外盛り上がっていて楽しそうですが、既に一番使っているのはkindle.
-ハックできたら楽しいだろうなぁ、、そんな夢を見ました。&lt;/p&gt;
-&lt;div class="caution" style="background: #F2DEDE; color: #b94a48; border: #EED3D7 1px solid; font-size: 0.8em; padding: 0.3em;"&gt;&lt;div class="line-block"&gt;
-&lt;div class="line"&gt;以下夢につき、同じ事を試すことであなたのkindleが&lt;strong&gt;ただの板&lt;/strong&gt;になってしまう可能性があります。文鎮化した場合は本当にどうしようもなくなるようです.&lt;/div&gt;
-&lt;div class="line-block"&gt;
-&lt;div class="line"&gt;その際にまな板以外の使い方が見つかっておりませんのでご注意下さい。&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;現在対応しているファームウェアのバージョンは5.3.1までのようです。
-バージョンの確認は、ホームから 右上のメニュー &amp;gt; 設定 &amp;gt;
-もう一度右上のメニュー &amp;gt; 端末情報
-から見ることができます。自分は購入時5.3.0、先程5.3.1にアップデートしました。(やり方は&lt;a class="reference external" href="http://ktmtt.com/diary/2012-kindle-paperwhite-firmware-update.html"&gt;こっち&lt;/a&gt;に書きました)&lt;/p&gt;
-&lt;p&gt;&lt;a class="reference external" href="http://www.mobileread.com/forums/showthread.php?t=198446"&gt;http://www.mobileread.com/forums/showthread.php?t=198446&lt;/a&gt;&lt;/p&gt;
-&lt;ol class="arabic"&gt;
-&lt;li&gt;&lt;p class="first"&gt;上記URLで公開されている kpw_jb.zip
-をダウンロードしてくる。こいつはjailbreak用のスクリプト以外にもレスキュー用のファイルやらなんやらが含まれていてよしなにやってくれるみたい。(jailbreak.sh見れば大きな流れがわかるよ)&amp;nbsp;展開しREADME.txtにそって手順を踏んでいきます。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;kindleをUSBでPCにつなぐ。ファイルシステムにマウントされるので直下にjailbreak.sh&amp;quot;
-と &amp;quot;MOBI8_DEBUG&amp;quot;をコピーする。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;jailbreak.mobiは直下ではなくdocuments以下に置く。(これが細工されたmobiファイルでjailbreak.shを呼ぶのかな??)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;kindleをアンマウントする。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;dl class="first docutils"&gt;
-&lt;dt&gt;ホーム画面に&amp;quot;Paperwhite Jailbreak&amp;quot;とマヤ文明の絵みたいな表紙が書かれたパーソナルドキュメントがあるのでそれを開く&lt;/dt&gt;
-&lt;dd&gt;&lt;p class="first last"&gt;&lt;a class="reference external" href="http://ktmtt.com/diary/wp-content/uploads/22e2b5cc8d152fff9a3ba6f6a9c4b214.png"&gt;&lt;img alt="kindle_jailbreak" src="http://ktmtt.com/diary/wp-content/uploads/22e2b5cc8d152fff9a3ba6f6a9c4b214-222x300.png" /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;dl class="first docutils"&gt;
-&lt;dt&gt;すると下の画面になるので、文字をタップ&lt;/dt&gt;
-&lt;dd&gt;&lt;p class="first last"&gt;&lt;a class="reference external" href="http://ktmtt.com/diary/wp-content/uploads/db2b16b36269374d5e52441a4f62538e.png"&gt;&lt;img alt="image1" src="http://ktmtt.com/diary/wp-content/uploads/db2b16b36269374d5e52441a4f62538e-222x300.png" /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;dl class="first docutils"&gt;
-&lt;dt&gt;表示されているとおりに左上を2秒ほど長押し&lt;/dt&gt;
-&lt;dd&gt;&lt;p class="first last"&gt;&lt;a class="reference external" href="http://ktmtt.com/diary/wp-content/uploads/8b9ba847f0d35b7e69bca4ed920c0974.png"&gt;&lt;img alt="image2" src="http://ktmtt.com/diary/wp-content/uploads/8b9ba847f0d35b7e69bca4ed920c0974-222x300.png" /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;dl class="first docutils"&gt;
-&lt;dt&gt;あとはおまかせ&lt;/dt&gt;
-&lt;dd&gt;&lt;p class="first last"&gt;&lt;img alt="image3" src="http://ktmtt.com/diary/wp-content/uploads/ff15cbae21d03e1b9fb739830db4f39c-222x300.png" /&gt;
-&lt;img alt="image4" src="http://ktmtt.com/diary/wp-content/uploads/ab4d8a5d3ba2182253f295b7de29f41c-222x300.png" /&gt;
-&lt;a class="reference external" href="http://ktmtt.com/diary/wp-content/uploads/72f02428f02127c6315bf8de95bfde51.png"&gt;&lt;img alt="image5" src="http://ktmtt.com/diary/wp-content/uploads/72f02428f02127c6315bf8de95bfde51-222x300.png" /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;dl class="first docutils"&gt;
-&lt;dt&gt;丁寧にログまで残してくれるんですね。あっさり完了。&lt;/dt&gt;
-&lt;dd&gt;&lt;p class="first last"&gt;&lt;a class="reference external" href="http://ktmtt.com/diary/wp-content/uploads/38be4d412c6a6f8f1b88e9efb6f05b02.png"&gt;&lt;img alt="image6" src="http://ktmtt.com/diary/wp-content/uploads/38be4d412c6a6f8f1b88e9efb6f05b02-222x300.png" /&gt;&lt;/a&gt;
-&lt;a class="reference external" href="http://ktmtt.com/diary/wp-content/uploads/4e1deab25f47a7c3709a0855bb1ed593.png"&gt;&lt;img alt="image7" src="http://ktmtt.com/diary/wp-content/uploads/4e1deab25f47a7c3709a0855bb1ed593-222x300.png" /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;文鎮化した際はどうしようもないようなので、その時は観念しましょう。&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Thu, 03 Jan 2013 20:58:00 +0900</pubDate><guid>tag:d.ktmtt.com,2013-01-03:-/2013/01/03/kindle-paperwhite-5-3-jailbreak/</guid><category>kindle</category></item></channel></rss>
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Thu, 03 Jan 2013 20:58:00 +0900</pubDate><guid>tag:d.ktmtt.com,2013-01-03:-/2013/01/03/fitbit-aria/</guid><category>fitbit</category><category>gadget</category></item></channel></rss>

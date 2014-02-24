@@ -18,14 +18,14 @@
     <link rel="author" href="https://plus.google.com/+KatsumaIto/posts" />
 
     <!-- Open Graph tags -->
-            <meta property="og:type" content="website"/>
-            <meta property="og:title" content="ktmtt"/>
-            <meta property="og:url" content="http://d.ktmtt.com"/>
-            <meta property="og:description" content="ktmtt"/>
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="最近のTitaniumはセットアップが楽"/>
+            <meta property="og:url" content="http://d.ktmtt.com/-/2014/02/24/titanium-setup/"/>
+            <meta property="og:description" content="初めてのiOSアプリを作った時まだネイティブで作れなかった。 ちょうどTitaniumが流行っていたので試してみたらしっくりきたのでなんとかアプリを1つ作った。 ただ、Tiは一部動きが怪しかったり(当時は)SDKの問題で審査に通らなかったりとそれなりに不満があり、このおかげでObjective-Cで開発する決心がついたとも言える。 久しぶりにTitaniumを触る機会があったのだけど、セットアップが超簡単になってて驚いた。 npm install -g titanium npm install -g alloy # 必要であれば npm install -g tishadow # 必要であれば titanium sdk install --default Username: mail@example.com # ユーザー名とパスワードを聞かれるので入力 Passowrd: ******* New version available! 3.2.1.GA Downloading http://api.appcelerator.net/p/v1/release-download?token=ttttoken ..."/>
 
         <link href="http://d.ktmtt.com/feeds/atom.xml" type="application/atom+xml" rel="alternate" title="ktmtt RSS Feed" />
 
-        <title>CoolBook tag // ktmtt // </title>
+        <title>最近のTitaniumはセットアップが楽 // ktmtt // </title>
 
 <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -58,7 +58,7 @@
                             <li><a href="http://d.ktmtt.com/tag/titanium.html"><span class="cat-label-blue"></span>titanium</a></li>
                             <li><a href="http://d.ktmtt.com/tag/tips.html"><span class="cat-label-blue"></span>Tips</a></li>
                             <li><a href="http://d.ktmtt.com/tag/ios.html"><span class="cat-label-blue"></span>iOS</a></li>
-                            <li><a href="http://d.ktmtt.com/tag/coolbook.html"><span class="cat-label-yellow"<span class="cat-label-blue"></span>CoolBook</a></li>
+                            <li><a href="http://d.ktmtt.com/tag/coolbook.html"><span class="cat-label-blue"></span>CoolBook</a></li>
                             <li><a href="http://d.ktmtt.com/tag/javascript.html"><span class="cat-label-blue"></span>javascript</a></li>
                             <li><a href="http://d.ktmtt.com/tag/fuelphp.html"><span class="cat-label-blue"></span>FuelPHP</a></li>
                             <li><a href="http://d.ktmtt.com/tag/python.html"><span class="cat-label-blue"></span>python</a></li>
@@ -120,72 +120,46 @@
             </div>
         </div>
 
-<div class="pure-u-3-4 margin-blue">
-    <h1 class="h1-pad">
-Posts tagged 'CoolBook'    </h1>
-</div>
-<div class="pure-u-3-4">
-    <div class="article-item margin-blue pure-g">
-        <div class="pure-u">
-            <img class="author-avatar" alt="ka2n" src="http://www.gravatar.com/avatar/6041a51295536d946d4554a1905b3097" height="64" width="64">
-        </div>
+    <div class="pure-u-3-4">
+        <div class="article-content margin-blue">
+            <div class="article-content-header pure-g">
+                <div class="pure-u-1">
+                    <h1 class="article-content-title">最近のTitaniumはセットアップが楽</h1>
+                    <p class="article-content-subtitle">
+                        by <a href="http://d.ktmtt.com/author/ka2n.html">ka2n</a> on <span>2014-02-24</span>
+                        // Posted in <a href="http://d.ktmtt.com/category/dev.html">dev</a>
+                            // under                                 <a class="post-category post-category-design" href="http://d.ktmtt.com/tag/titanium.html">titanium</a>
+                                <a class="post-category post-category-design" href="http://d.ktmtt.com/tag/ios.html">iOS</a>
+                    </p>
+                </div>
+            </div>
+            <div class="article-content-body">
+                <p>
+                    <p>初めてのiOSアプリを作った時まだネイティブで作れなかった。
+ちょうどTitaniumが流行っていたので試してみたらしっくりきたのでなんとかアプリを1つ作った。
+ただ、Tiは一部動きが怪しかったり(当時は)SDKの問題で審査に通らなかったりとそれなりに不満があり、このおかげでObjective-Cで開発する決心がついたとも言える。</p>
+<p>久しぶりにTitaniumを触る機会があったのだけど、セットアップが超簡単になってて驚いた。</p>
+<div class="highlight"><pre>npm install -g titanium
+npm install -g alloy <span class="c"># 必要であれば</span>
+npm install -g tishadow <span class="c"># 必要であれば</span>
 
-        <div class="pure-u-3-4">
-            <h4 class="article-title">
-                <a href="http://d.ktmtt.com/-/2011/07/29/lion-coolbook/" rel='bookmark'>LionでCoolBookを使うためのたった一つの方法</a>
-                <p class="pure-u-1 email-desc2">
-                    2011-07-29
+titanium sdk install --default
+Username: mail@example.com <span class="c"># ユーザー名とパスワードを聞かれるので入力</span>
+Passowrd: *******
+
+New version available! 3.2.1.GA
+
+Downloading http://api.appcelerator.net/p/v1/release-download?token<span class="o">=</span>ttttoken
+
+...
+</pre></div>
+<p>これでOK! すごく楽になった。でも最近Ruby触る機会が多いのでRubyMotionやりたい。</p>
+
                 </p>
-            </h4>
-            <div class="article-summary">
-                <p>煽りタイトル万歳</p>
-<p>Mac OS X 10.7
-Lionがリリースされて早速アップグレードした方はたくさん居らっしゃるでしょうが、モバイラー必須のソフトウェアであるところのCoolBook(ver2.22)がLionでは動かない事に落胆している方もそれなりに居らっしゃる事でしょう。</p>
-<p>ということで、LionでもCoolBookを使う方法があったので書きました。OSの中の重要なファイルをいじるので、<strong>失敗すれば最悪OS再インストールなどが必要になります。責任は一切取れませんのでよろしくお願いします。</strong></p>
-<p>手順は以下の通り</p>
-<ol class="arabic simple">
-<li>CoolBookをインストール</li>
-<li>/System/Library/Extensionsの中にある、AppleIntelCPUPowerManagementClient.kextとAppleIntelCPUPowerManagement.kextをバックアップ</li>
-<li>上記の2つのkextを削除</li>
-<li><a class="reference external" href="http://blog.nawcom.com/?p=806">SleepEnabler for Lion 10.7.0
-Lates</a>??からSleepEnabler.kext.10.7.x.zipをダウンロード、展開してSleepEnabler.kextを手に入れます</li>
-<li>SleepEnabler.kextを/System/Library/Extensions/内に入れて、パーミッションなどを設定する(
-やり方が分からない場合は <a class="reference external" href="http://cheetha.net/">kexthelper</a>を使ってください ...</li></ol>
+ 
             </div>
         </div>
     </div>
-    <div class="article-item margin-blue pure-g">
-        <div class="pure-u">
-            <img class="author-avatar" alt="ka2n" src="http://www.gravatar.com/avatar/6041a51295536d946d4554a1905b3097" height="64" width="64">
-        </div>
-
-        <div class="pure-u-3-4">
-            <h4 class="article-title">
-                <a href="http://d.ktmtt.com/-/2010/04/09/coolbook-settings-for-macbookpro5-5/" rel='bookmark'>CoolBook Settings for MacBookPro5,5</a>
-                <p class="pure-u-1 email-desc2">
-                    2010-04-09
-                </p>
-            </h4>
-            <div class="article-summary">
-                <p>こんな感じです。バッテリーでの駆動時間が伸びた気がする。</p>
-<p><img alt="image0" src="http://ktmtt.com/diary/wp-content/uploads/coolbookadp.png" /></p>
-<p>↑電源アダプタ使用時の設定。こっちは適当。</p>
-<p><img alt="image1" src="http://ktmtt.com/diary/wp-content/uploads/coolbookbt1.png" /></p>
-<p>↑バッテリー使用時の設定。2261MHzでの駆動は削って、1.00V以下を狙ってます。</p>
-
-            </div>
-        </div>
-    </div>
-<div class="pagination-wrapper">
-    <div class="pagination">
-        <div class="pagination-left">
-                &nbsp;
-        </div>
-        <span>Page 1 / 1</span>
-        <div class="pagination-right">
-        </div>
-    </div>
-</div></div>
 
         <div class="pure-u-3-4">
             <footer class="footer">
