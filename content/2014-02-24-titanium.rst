@@ -1,0 +1,32 @@
+最近のTitaniumはセットアップが楽
+=========================================
+:date: 2014-02-24
+:author: ka2n
+:slug: titanium-setup
+:tags: titanium, iOS
+:category: dev
+
+初めてのiOSアプリを作った時まだネイティブで作れなかった。
+ちょうどTitaniumが流行っていたので試してみたらしっくりきたのでなんとかアプリを1つ作った。
+ただ、Tiは一部動きが怪しかったり(当時は)SDKの問題で審査に通らなかったりとそれなりに不満があり、このおかげでObjective-Cで開発する決心がついたとも言える。
+
+久しぶりにTitaniumを触る機会があったのだけど、セットアップが超簡単になってて驚いた。
+
+.. code-block:: bash
+
+   npm install -g titanium
+   npm install -g alloy # 必要であれば
+   npm install -g tishadow # 必要であれば
+
+   titanium sdk install --default
+   Username: mail@example.com # ユーザー名とパスワードを聞かれるので入力
+   Passowrd: *******
+
+   New version available! 3.2.1.GA
+
+   Downloading http://api.appcelerator.net/p/v1/release-download?token=ttttoken
+
+   ...
+ 
+
+これでOK! すごく楽になった。でも最近Ruby触る機会が多いのでRubyMotionやりたい。
