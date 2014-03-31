@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ktmtt</title><link>http://d.ktmtt.com/</link><description></description><atom:link href="http://d.ktmtt.com/feeds/atom.xml" rel="self"></atom:link><lastBuildDate>Mon, 24 Feb 2014 00:00:00 +0900</lastBuildDate><item><title>最近のTitaniumはセットアップが楽</title><link>http://d.ktmtt.com/-/2014/02/24/titanium-setup/</link><description>&lt;p&gt;初めてのiOSアプリを作った時まだネイティブで作れなかった。
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ktmtt</title><link>http://d.ktmtt.com/</link><description></description><atom:link href="http://d.ktmtt.com/feeds/atom.xml" rel="self"></atom:link><lastBuildDate>Mon, 31 Mar 2014 00:00:00 +0900</lastBuildDate><item><title>2014-03-31</title><link>http://d.ktmtt.com/-/2014/03/31/2014-03-31/</link><description>&lt;p&gt;はてなブログはじめました&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://ka2n.hatenablog.com/"&gt;http://ka2n.hatenablog.com/&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Mon, 31 Mar 2014 00:00:00 +0900</pubDate><guid>tag:d.ktmtt.com,2014-03-31:-/2014/03/31/2014-03-31/</guid></item><item><title>最近のTitaniumはセットアップが楽</title><link>http://d.ktmtt.com/-/2014/02/24/titanium-setup/</link><description>&lt;p&gt;初めてのiOSアプリを作った時まだネイティブで作れなかった。
 ちょうどTitaniumが流行っていたので試してみたらしっくりきたのでなんとかアプリを1つ作った。
 ただ、Tiは一部動きが怪しかったり(当時は)SDKの問題で審査に通らなかったりとそれなりに不満があり、このおかげでObjective-Cで開発する決心がついたとも言える。&lt;/p&gt;
 &lt;p&gt;久しぶりにTitaniumを触る機会があったのだけど、セットアップが超簡単になってて驚いた。&lt;/p&gt;
@@ -323,14 +325,4 @@ Oneを購入しました。&lt;/p&gt;
 Please try again later.&amp;quot;&lt;/p&gt;
 &lt;p&gt;とは書いてあるけれど、通信内容を覗くと&amp;quot;INVALID_TRACKER_DATA&amp;quot;と入っていたのでこちらがおかしいようです。Fitbit
 Oneを工場出荷時へリセットする方法がわからないのでひとまずサポートに連絡中。&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Sun, 14 Apr 2013 21:51:00 +0900</pubDate><guid>tag:d.ktmtt.com,2013-04-14:-/2013/04/14/fitbit-one/</guid><category>fitbit</category></item><item><title>Fitbit Aria 体重計で未来を感じた</title><link>http://d.ktmtt.com/-/2013/01/03/fitbit-aria/</link><description>&lt;div class="line-block"&gt;
-&lt;div class="line"&gt;Fitbit Aiaという体重計を買いました。&lt;/div&gt;
-&lt;div class="line"&gt;何がすごいってとりあえず載れば計測開始、体重から誰か判別、そしてWiFiで自動的にFitbitという健康管理Webサイトに同期してくれる。気付くと毎日の体重変化のグラフが出来上がっている！！&lt;/div&gt;
-&lt;div class="line-block"&gt;
-&lt;div class="line"&gt;機械に管理されてると言われようが、これが未来だ。&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;Fitbitは体重の記録の他に、食事、運動、睡眠の記録をする事が出来るらしい。
-フィットネス系の他のサービスと連携してデータをやり取りする事が出来るみたいです。
-ただ、よく使うiOSのアプリCyclemeterはその連携に対応していない模様。&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Thu, 03 Jan 2013 20:58:00 +0900</pubDate><guid>tag:d.ktmtt.com,2013-01-03:-/2013/01/03/fitbit-aria/</guid><category>fitbit</category><category>gadget</category></item></channel></rss>
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ka2n</dc:creator><pubDate>Sun, 14 Apr 2013 21:51:00 +0900</pubDate><guid>tag:d.ktmtt.com,2013-04-14:-/2013/04/14/fitbit-one/</guid><category>fitbit</category></item></channel></rss>
