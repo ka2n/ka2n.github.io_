@@ -49,7 +49,8 @@ READERS = {
 }
 
 MENUITEMS = (
-    ('@ka2n', 'https://twitter.com/ka2n'),
+    ('はてなブログ(メイン)', 'http://ka2n.hatenablog.com/'),
+    ('Twitter', 'https://twitter.com/ka2n'),
     ('GitHub', 'https://github.com/ka2n'),
 )
 
