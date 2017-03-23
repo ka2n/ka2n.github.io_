@@ -1,0 +1,73 @@
+<html>
+<h1>Bookmarklet executor</h1>
+<p>Add to home screen.</p>
+
+<textarea id="js" rows=50 cols=100></textarea>
+<button id="save" type="button">Save</button>
+<button id="clear" type="button">Clear</button>
+<hr />
+<textarea id="logger" readonly rows=30 cols=100></textarea>
+
+<script>
+    ((win, doc) => {
+        let href = doc.location.href
+        let params = href.slice(href.indexOf('?') + 1).split('&').map(hash => hash.split('=')).reduce((h, o) => { h[o[0]] = decodeURIComponent(o[1]); return h }, {})
+        let id = params.id
+        if (!id) {
+            alert('id required')
+            return
+        }
+        let key = `exec.${id}`
+        var textarea = doc.getElementById('js')
+        var logger = doc.getElementById('logger')
+
+        // Create new hook
+        let button = doc.getElementById('save')
+        button.addEventListener('click', () => {
+            var textarea = doc.getElementById('js')
+            let js = textarea.value
+
+            if (!js) {
+                alert(`js required`)
+                return
+            }
+            win.localStorage.setItem(key, JSON.stringify({
+                js
+            }))
+            alert('done, this will execute next time.')
+        })
+
+        let clear = doc.getElementById('clear')
+        clear.addEventListener('click', () => {
+            if (confirm('clear script?')) {
+                win.localStorage.removeItem(key)
+                alert('done')
+                return
+            }
+        })
+
+
+        // Clear
+        if (params.clear) {
+            if (confirm('clear script?')) {
+                win.localStorage.removeItem(key)
+                alert('done')
+                return
+            }
+        }
+
+        // Execute hook
+        let profile = JSON.parse(win.localStorage.getItem(key) || '{}')
+        if (profile.js) {
+            textarea.value = profile.js
+            try {
+                eval(profile.js)
+            } catch (e) {
+                logger.value = e
+            }
+        }
+    })(window, document)
+
+</script>
+
+</html>
